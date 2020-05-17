@@ -1,0 +1,176 @@
+/* Changes the color of the space to the right of open tabs */
+#tabbrowser-tabs {
+background-color: #none !important;
+}
+
+/* Gets rid of the space on the top of the window that's not taken up by tabs */
+.titlebar-spacer[type="pre-tabs"],
+.titlebar-spacer[type="post-tabs"] {
+  display: none !important;
+  width: 0px !important;
+  max-width: 0px !important;
+}
+
+
+
+/* Changes the text color when you type something into the url bar. If someone knows how to fix the blue text, please let me know */
+#urlbar{
+	box-shadow: none !important;
+	background-color: #b24747 !important;
+	background: #1a1a1a !important;
+	border: none !important;
+	color : #b24747 !important;
+	font-weight: bold !important;
+}
+
+
+/* Removes the faint line above the url bar */
+#nav-bar {
+    box-shadow: none !important;
+    border-top: none !important;
+  }
+
+
+.tabbrowser-tab[label^="New Tab"] .tab-icon-image {
+	list-style-image: none !important;
+	width: 0 !important;
+	padding-left: 16px !important;
+	background: url("https://raw.githubusercontent.com/seirin-blu/Firefox-Halo/master/Firefox%20Halo%20with%20Paw%2048.png") !important; 
+	background-size: 16px 16px !important;
+	background-repeat: no-repeat !important;
+	}
+
+
+
+/* Changes the color of the bookmarks toolbar */
+#PersonalToolbar {
+	background-color: #1a1a1a !important;
+}
+
+
+
+/* Changes the color of the bookmark stars */
+.urlbarView-row[type=bookmark] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-type-icon {
+fill: #b24747 !important;
+}
+
+
+
+/* This makes it so that on start-up the screen doesn't flash */
+#browser vbox#appcontent tabbrowser,
+#content,
+#tabbrowser-tabpanels,
+browser[type=content-primary],
+browser[type=content] > html{
+    background: #1a1a1a !important
+}
+
+
+
+/* Removes weird line between the stacks and profile */
+#PanelUI-button {
+border:none !important;
+margin-inline-start: 0px !important;
+padding-inline-start: 0px !important;
+}
+
+
+
+/* This mess makes it so that there's no hover over the toolbar icons */
+.urlbar-icon,
+.urlbar-icon-wrapper,
+#tabbrowser-tabs toolbarbutton,
+toolbar toolbarbutton > .toolbarbutton-icon,
+toolbar toolbarbutton > .toolbarbutton-badge-stack,
+.titlebar-button,
+#identity-box,
+#tracking-protection-icon-container,
+.findbar-textbox~toolbarbutton,
+toolbarbutton.scrollbutton-up,
+toolbarbutton.scrollbutton-down{ background-color: transparent !important;}
+
+
+
+/* Removes the border below the bookmarks toolbar */
+#navigator-toolbox {
+  border: none !important;
+}
+
+
+
+/* Changes the colors in the URL bar */
+#urlbar-background {background-color: #1a1a1a !important; border-color: #b24747 !important;}
+#urlbar-input-container {color: #b24747 !important;}
+#urlbar { background-color: #1a1a1a !important;}
+
+
+/* Removes the line between tabs */
+.tabbrowser-tab::before, 
+.tabbrowser-tab::after{
+  display: none !important;
+}
+
+
+
+/* Changes the tab topline color */
+.tabbrowser-tab {--tab-line-color: #b24747 !important; color: #b24747 !important;}
+
+
+
+
+/* Changes the colors of the tabs */
+#tabbrowser-tabs {
+background-color: #1a1a1a !important;
+}
+
+
+
+/* Changes toolbar button colors */
+.toolbarbutton-1 {
+    fill: #b24747 !important;
+    background-color: #1a1a1a !important;
+}
+
+
+
+/* This block makes the tabs seamless with the rest of the config's color */
+tab
+{
+    height:3rem;
+    background-color: #000000 !important;
+    font-weight: thin !important;
+    color : #b24747 !important;
+}
+
+.tab-content[selected="true"]
+{
+
+    background-color: #1a1a1a !important;
+    font-weight: bold !important;
+    color : #b24747 !important;
+}
+
+#nav-bar-customization-target {
+	background-color: #b24747 !important;
+}
+/* ENDBLOCK */
+
+
+/* Changes the color of the empty area around the nav bar */
+#nav-bar-customization-target {
+	background-color: #1a1a1a !important;
+}
+
+
+
+/* Changes the colors three stacks option menu*/
+.PanelUI-subView {
+  --newtab-search-icon-color: #b24747;
+  --arrowpanel-background: none !important;
+  --arrowpanel-color: #B24747 !important;
+  --lwt-accent-color: rgb(12, 12, 13);
+  --lwt-text-color: #B24747 !important;
+  color: #B24747 !important;
+
+
+
