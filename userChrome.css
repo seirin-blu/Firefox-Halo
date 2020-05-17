@@ -30,7 +30,7 @@ background-color: #none !important;
     border-top: none !important;
   }
 
-
+/* Changes the new tab favicon */
 .tabbrowser-tab[label^="New Tab"] .tab-icon-image {
 	list-style-image: none !important;
 	width: 0 !important;
