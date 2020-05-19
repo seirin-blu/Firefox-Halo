@@ -24,7 +24,7 @@ html.private div.showPrivate div.search-inner-wrapper, html.private div.showPriv
 
 /* Changes the logo on the private browsing home screen */
 html.private .logo {
-	background-image: url("firefox_halo_with paw_private.png") !important;
+	background-image: url("firefox_halo_with_paw_private.png") !important;
 }
 
 
