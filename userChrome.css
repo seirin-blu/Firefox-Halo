@@ -4,11 +4,26 @@
 }
 
 
+
 /* Changes the color of the star button on websites you can bookmark */
 #star-button	{
 	fill: #b24747 !important;
 }
 
+
+
+/* This doesn't currently work */
+/*
+/* Changes the color of the animation when you bookmark a page
+#star-button[starred] {
+	fill: #b24747 !important;
+}
+
+#star-button[starred][animate] + #star-button-animatable-box > #star-button-animatable-image {
+	stroke: #b24747 !important;
+	fill: #b24747 !important;
+}
+*/
 
 
 
