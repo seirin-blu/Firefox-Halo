@@ -1,14 +1,39 @@
 /* Changes the color of the space to the right of open tabs */
 #tabbrowser-tabs {
-background-color: #none !important;
+	background-color: #none !important;
 }
+
+
+/* Changes the color of the star button on websites you can bookmark */
+#star-button	{
+	fill: #b24747 !important;
+}
+
+
+
+
+/* Disables the blue flash when a tab loads */
+.tabbrowser-tab .tab-loading-burst {
+  display: none !important;
+}
+
+
+
+/* Changes the color behind of traffic light buttons (mac) */
+toolbar#TabsToolbar
+{
+	-moz-appearance: none !important;
+	background-color: #1a1a1a !important;
+}
+
+
 
 /* Gets rid of the space on the top of the window that's not taken up by tabs */
 .titlebar-spacer[type="pre-tabs"],
 .titlebar-spacer[type="post-tabs"] {
-  display: none !important;
-  width: 0px !important;
-  max-width: 0px !important;
+	display: none !important;
+	width: 0px !important;
+	max-width: 0px !important;
 }
 
 
@@ -26,9 +51,9 @@ background-color: #none !important;
 
 /* Removes the faint line above the url bar */
 #nav-bar {
-    box-shadow: none !important;
-    border-top: none !important;
-  }
+	box-shadow: none !important;
+	border-top: none !important;
+}
 
 /* Changes the new tab favicon */
 .tabbrowser-tab[label^="New Tab"] .tab-icon-image {
@@ -38,20 +63,31 @@ background-color: #none !important;
 	background: url("https://raw.githubusercontent.com/seirin-blu/Firefox-Halo/master/Firefox%20Halo%20with%20Paw%2048.png") !important; 
 	background-size: 16px 16px !important;
 	background-repeat: no-repeat !important;
-	}
+}
+
+/* Changes the new private tab favicon */
+.tabbrowser-tab[label^="Private Browsing"] .tab-icon-image {
+	list-style-image: none !important;
+	width: 0 !important;
+	padding-left: 16px !important;
+	background: url("favicon_private.png") !important; 
+	background-size: 16px 16px !important;
+	background-repeat: no-repeat !important;
+}
 
 
 
 /* Changes the color of the bookmarks toolbar */
 #PersonalToolbar {
 	background-color: #1a1a1a !important;
+        color: #b24747 !important;
 }
 
 
 
 /* Changes the color of the bookmark stars */
 .urlbarView-row[type=bookmark] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-type-icon {
-fill: #b24747 !important;
+        fill: #b24747 !important;
 }
 
 
@@ -62,16 +98,16 @@ fill: #b24747 !important;
 #tabbrowser-tabpanels,
 browser[type=content-primary],
 browser[type=content] > html{
-    background: #1a1a1a !important
+	background: #1a1a1a !important;
 }
 
 
 
 /* Removes weird line between the stacks and profile */
 #PanelUI-button {
-border:none !important;
-margin-inline-start: 0px !important;
-padding-inline-start: 0px !important;
+	border:none !important;
+	margin-inline-start: 0px !important;
+	padding-inline-start: 0px !important;
 }
 
 
@@ -87,13 +123,15 @@ toolbar toolbarbutton > .toolbarbutton-badge-stack,
 #tracking-protection-icon-container,
 .findbar-textbox~toolbarbutton,
 toolbarbutton.scrollbutton-up,
-toolbarbutton.scrollbutton-down{ background-color: transparent !important;}
+toolbarbutton.scrollbutton-down {
+	background-color: transparent !important;
+}
 
 
 
 /* Removes the border below the bookmarks toolbar */
 #navigator-toolbox {
-  border: none !important;
+	border: none !important;
 }
 
 
@@ -101,34 +139,39 @@ toolbarbutton.scrollbutton-down{ background-color: transparent !important;}
 /* Changes the colors in the URL bar */
 #urlbar-background {background-color: #1a1a1a !important; border-color: #b24747 !important;}
 #urlbar-input-container {color: #b24747 !important;}
-#urlbar { background-color: #1a1a1a !important;}
+#urlbar { 
+	background-color: #1a1a1a !important;
+}
 
 
 /* Removes the line between tabs */
 .tabbrowser-tab::before, 
 .tabbrowser-tab::after{
-  display: none !important;
+	display: none !important;
 }
 
 
 
 /* Changes the tab topline color */
-.tabbrowser-tab {--tab-line-color: #b24747 !important; color: #b24747 !important;}
+.tabbrowser-tab {
+	--tab-line-color: #b24747 !important; 
+	color: #b24747 !important;
+}
 
 
 
 
-/* Changes the colors of the tabs */
+/* Changes the colors of the area behind the tabs */
 #tabbrowser-tabs {
-background-color: #1a1a1a !important;
+	background-color: #000000 !important;
 }
 
 
 
 /* Changes toolbar button colors */
 .toolbarbutton-1 {
-    fill: #b24747 !important;
-    background-color: #1a1a1a !important;
+	fill: #b24747 !important;
+	background-color: #1a1a1a !important;
 }
 
 
@@ -136,18 +179,18 @@ background-color: #1a1a1a !important;
 /* This block makes the tabs seamless with the rest of the config's color */
 tab
 {
-    height:3rem;
-    background-color: #000000 !important;
-    font-weight: thin !important;
-    color : #b24747 !important;
+	height:3rem;
+	background-color: #000000 !important;
+	font-weight: thin !important;
+	color : #b24747 !important;
 }
 
 .tab-content[selected="true"]
 {
 
-    background-color: #1a1a1a !important;
-    font-weight: bold !important;
-    color : #b24747 !important;
+	background-color: #1a1a1a !important;
+	font-weight: bold !important;
+	color : #b24747 !important;
 }
 
 #nav-bar-customization-target {
@@ -163,14 +206,48 @@ tab
 
 
 
-/* Changes the colors three stacks option menu*/
-.PanelUI-subView {
-  --newtab-search-icon-color: #b24747;
-  --arrowpanel-background: none !important;
-  --arrowpanel-color: #B24747 !important;
-  --lwt-accent-color: rgb(12, 12, 13);
-  --lwt-text-color: #B24747 !important;
-  color: #B24747 !important;
+/* Changes the colors in the hamburger and other menus
+*
+* I can't figure out how to change the border color of the hamburger menu. If you know, please let me know
+*
+*/
+.PanelUI-subView, .panel-subview-body {
+	--newtab-search-icon-color: #b24747;
+	--arrowpanel-background: none !important;
+	--arrowpanel-color: #B24747 !important;
+	--lwt-accent-color: rgb(12, 12, 13);
+	--lwt-text-color: #b24747 !important;
+	color: #B24747 !important;
+	background-color: #1a1a1a !important;
+        
+}
+	
+
+
+#personal-bookmarks .bookmark-item > .toolbarbutton-text {
+	text-color: #b24747 !important;
+	color: #b24747 !important; 
+	background-color: #1a1a1a !important
+}
+  
+
+/* Hides the private browsing indicator */
+.private-browsing-indicator {
+	display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
