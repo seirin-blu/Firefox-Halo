@@ -1,8 +1,10 @@
 # Firefox-Halo
 This repsoitory contains the userContent.css and userChrome.css files for Firefox Halo. Firefox Halo is not managed by, created by, or in partnership with Mozilla, Firefox, or any of its affiliates. Halo does not own any of the Firefox tradmarks, but rather justs acts as a free way to customize the browser.
 
+Normal Home Screen
 ![Normal Home Screen](https://raw.githubusercontent.com/seirin-blu/Firefox-Halo/master/Normal%20Home%20Screen.png)
 
+Private Browsing Mode
 ![Private Browsing Mode](https://raw.githubusercontent.com/seirin-blu/Firefox-Halo/master/Private%20Browsing%20Mode.png)
 
 Init and v1: These update are the inital commits and bug fixes to the code. They cover a lot of the features meant to be in the config but not all of them.
