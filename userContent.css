@@ -24,7 +24,7 @@ html.private div.showPrivate div.search-inner-wrapper, html.private div.showPriv
 
 /* Changes the logo on the private browsing home screen */
 html.private .logo {
-	background-image: url("Firefox Halo with Paw Private.png") !important;
+	background-image: url("firefox_halo_with_paw_private.png") !important;
 }
 
 
@@ -131,7 +131,7 @@ margin-bottom: 49px; }
 
 
 /* Changes the logo on the home screen*/
-.logo {background-image: url("https://raw.githubusercontent.com/seirin-blu/Firefox-Halo/master/Firefox%20Halo%20with%20Paw.png") !important;}
+.logo {background-image: url("https://raw.githubusercontent.com/seirin-blu/Firefox-Halo/master/firefox_halo_with_paw.png") !important;}
 
 
 

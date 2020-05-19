@@ -60,7 +60,7 @@ toolbar#TabsToolbar
 	list-style-image: none !important;
 	width: 0 !important;
 	padding-left: 16px !important;
-	background: url("https://raw.githubusercontent.com/seirin-blu/Firefox-Halo/master/Firefox%20Halo%20with%20Paw%2048.png") !important; 
+	background: url("firefox_halo_with_paw_48.png") !important; 
 	background-size: 16px 16px !important;
 	background-repeat: no-repeat !important;
 }
@@ -70,7 +70,7 @@ toolbar#TabsToolbar
 	list-style-image: none !important;
 	width: 0 !important;
 	padding-left: 16px !important;
-	background: url("Favicon Private.png") !important; 
+	background: url("firefox_halo_with paw_private_favicon.png") !important; 
 	background-size: 16px 16px !important;
 	background-repeat: no-repeat !important;
 }
