@@ -1,3 +1,6 @@
+/* Centers bookmarks in the bookmark toolbar */
+#PlacesToolbarItems{ -moz-box-pack: center }
+
 /* Changes the color of the space to the right of open tabs */
 #tabbrowser-tabs {
 	background-color: #none !important;
