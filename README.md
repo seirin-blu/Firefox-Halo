@@ -1,6 +1,8 @@
 # Firefox-Halo
 This repsoitory contains the userContent.css and userChrome.css files for Firefox Halo. Firefox Halo is not managed by, created by, or in partnership with Mozilla, Firefox, or any of its affiliates. Halo does not own any of the Firefox tradmarks, but rather justs acts as a free way to customize the browser.
 
+Please to do not distribute Halo without asking me first
+
 ### Normal Home Screen
 ![Normal Home Screen](/normal_home_screen.png)
 
