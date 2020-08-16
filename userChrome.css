@@ -638,3 +638,13 @@ tab
   background-image: url("icon/github_icon.png")!important;
   background-size: cover!important;
 }
+
+/* Gmail */
+.bookmark-item[image^="page-icon:https://mail.google.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/gmail_icon.png")!important;
+  background-size: cover!important;
+}
+
