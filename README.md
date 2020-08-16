@@ -17,4 +17,6 @@ v2.0.0: This update is a massive overhaul to the code. This fixes bugs and adds 
 
 v2.1.0 & v2.1.1: This probably destroyed everyone who was using this before this update's experience. If that's you, I'm sorry, I had to redo some structuring. v2.1.1 resolved some minor bugs.
 
-v2.2: This update resolved some very minor bugs and changed some image file names
+v2.2.0: This update resolved some very minor bugs and changed some image file names
+
+V3.0.0: v3.0.0 adds a lot. It adds 40 various bookmark icons specially made to match the style and color of Firefox Halo. There are far too many to show here, so peak inside of the icons folder.
