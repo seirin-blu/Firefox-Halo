@@ -260,14 +260,381 @@ tab
 
 
 
+/* The block below changes icons for various different sites to match Halo's theme */
+
+/* YouTube */
+.bookmark-item[image^="page-icon:https://www.youtube.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/youtube_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Twitter */
+.bookmark-item[image^="page-icon:https://twitter.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/twitter_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Reddit */
+.bookmark-item[image^="page-icon:https://www.reddit.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/reddit_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Pinterest */
+.bookmark-item[image^="page-icon:https://www.pinterest.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/pinterest_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Pinterest */
+.bookmark-item[image^="page-icon:https://www.pinterest.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/pinterest_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Facebook */
+.bookmark-item[image^="page-icon:https://www.facebook.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/facebook_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Tumblr */
+.bookmark-item[image^="page-icon:https://www.tumblr.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/tumblr_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Instagram */
+.bookmark-item[image^="page-icon:https://www.instagram.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/instagram_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* LinkedIn */
+.bookmark-item[image^="page-icon:https://www.linkedin.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/linkedin_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* NextDoor */
+.bookmark-item[image^="page-icon:https://www.nextdoor.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/nextdoor_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* DeviantArt */
+.bookmark-item[image^="page-icon:https://www.deviantart.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/deviantart_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Discord */
+.bookmark-item[image^="page-icon:https://discord.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/discord_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* TikTok */
+.bookmark-item[image^="page-icon:https://www.tiktok.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/tiktok_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Wikipedia */
+.bookmark-item[image^="page-icon:https://en.wikipedia.org"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/wikipedia_icon.png")!important;
+  background-size: cover!important;
+}
 
 
+/* Amazon */
+.bookmark-item[image^="page-icon:https://www.amazon.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/amazon_icon.png")!important;
+  background-size: cover!important;
+}
 
+/* Disney Plus */
+.bookmark-item[image^="page-icon:https://www.disneyplus.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/disneyplus_icon.png")!important;
+  background-size: cover!important;
+}
 
+/* Yelp */
+.bookmark-item[image^="page-icon:https://www.yelp.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/yelp_icon.png")!important;
+  background-size: cover!important;
+}
 
+/* Netflix */
+.bookmark-item[image^="page-icon:http://www.netflix.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/netflix_icon.png")!important;
+  background-size: cover!important;
+}
+.bookmark-item[image^="page-icon:https://www.netflix.com/browse"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/netflix_icon.png")!important;
+  background-size: cover!important;
+}
 
+/* Drive */
+.bookmark-item[image^="page-icon:https://drive.google.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/drive_icon.png")!important;
+  background-size: cover!important;
+}
 
+/* IMDb */
+.bookmark-item[image^="page-icon:https://www.imdb.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/imdb_icon.png")!important;
+  background-size: cover!important;
+}
 
+/* Fandom */
+.bookmark-item[image^="page-icon:https://www.fandom.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/fandom_icon.png")!important;
+  background-size: cover!important;
+}
 
+/* Tripadvisor */
+.bookmark-item[image^="page-icon:https://www.tripadvisor.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/tripadvisor_icon.png")!important;
+  background-size: cover!important;
+}
 
+/* Craigslist */
+.bookmark-item[image^="page-icon:https://craigslist.org/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/craigslist_icon.png")!important;
+  background-size: cover!important;
+}
 
+/* Ebay */
+.bookmark-item[image^="page-icon:https://www.ebay.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/ebay_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* World of Succulents */
+.bookmark-item[image^="page-icon:https://worldofsucculents.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/worldofsucculents_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Indeed */
+.bookmark-item[image^="page-icon:https://www.indeed.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/indeed_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Etsy */
+.bookmark-item[image^="page-icon:https://www.etsy.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/etsy_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Apple */
+.bookmark-item[image^="page-icon:https://www.apple.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/apple_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* ESPN */
+.bookmark-item[image^="page-icon:https://www.espn.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/espn_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* New York Times */
+.bookmark-item[image^="page-icon:https://www.nytimes.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/nyt_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Google */
+.bookmark-item[image^="page-icon:https://www.google.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/google_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* CNN */
+.bookmark-item[image^="page-icon:https://www.cnn.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/cnn_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Microsoft */
+.bookmark-item[image^="page-icon:https://www.microsoft.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/microsoft_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Dropbox */
+.bookmark-item[image^="page-icon:https://www.dropbox.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/dropbox_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Spotify */
+.bookmark-item[image^="page-icon:https://www.spotify.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/spotify_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Steam */
+.bookmark-item[image^="page-icon:https://store.steampowered.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/steam_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* PayPal */
+.bookmark-item[image^="page-icon:https://www.paypal.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/paypal_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Hulu */
+.bookmark-item[image^="page-icon:https://www.hulu.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/hulu_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* NPR */
+.bookmark-item[image^="page-icon:https://www.npr.org/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/npr_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* NPR */
+.bookmark-item[image^="page-icon:https://www.bbc.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/bbc_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* GitHub */
+.bookmark-item[image^="page-icon:https://github.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/github_icon.png")!important;
+  background-size: cover!important;
+}
