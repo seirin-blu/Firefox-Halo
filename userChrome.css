@@ -648,3 +648,12 @@ tab
   background-size: cover!important;
 }
 
+/* Generic Icon YOU HAVE TO ASSIGN THE SITE */
+.bookmark-item[image^="LINK"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/noicon_icon.png")!important;
+  background-size: cover!important;
+}
+
