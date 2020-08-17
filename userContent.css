@@ -1,3 +1,14 @@
+/* This theoretically should make it so that you can just change the colors from here */
+body {
+  --main-color: #1a1a1a;
+  --private-main-color: #261010; /* This one does not work for some reason*/
+  --main-accent-color: #b24747;
+  --glow-color: #993d3d;
+}
+
+
+
+
 /*
 
 Private Browsing 
@@ -31,7 +42,7 @@ html.private .logo {
 
 /* Changes the color of the wordmark */
 .wordmark {
-  fill: #b24747 !important;
+  fill: var(--main-accent-color) !important;
 }
 
 
@@ -61,16 +72,16 @@ html.private {
 Common Browsing
 
 */
-@-moz-document url(about:newtab), url(about:home), url(about:preferences), url(about:blank) { 
+@-moz-document url(about:newtab), url(about:home), url(about:blank) { 
 
 
 
 /* Makes the search bar on the home screen round with red text and a red border when not clicked */
 #newtab-search-text,
   #searchSubmit{
-    fill: #b24747 !important;
+    fill: var(--main-accent-color) !important;
     border-radius: 48px !important;
-    border-color: #b24747 !important;
+    border-color: var(--main-accent-color) !important;
     box-shadow: none !important;
     background-color: none !important;
     color: none !important;
@@ -81,21 +92,21 @@ Common Browsing
 
 /* Changes the color of the glow when you click the search bar on the home screen */
 .search-wrapper .search-inner-wrapper:active input, .search-wrapper input:focus {
-  border: 3px solid #B24747 !important;
-  box-shadow: 0 0 7px #993d3d !important;
+  border: 3px solid var(--main-accent-color) !important;
+  box-shadow: 0 0 7px var(--glow-color) !important;
   }
 
 
 /* Changes the background color inside of the search bar */
 #newtab-search-text{
-  background-color: #1a1a1a !important;
-  color: #b24747 !important;
+  background-color: var(--main-color) !important;
+  color: var(--main-accent-color) !important;
 }
 
 
 
 /* Changes the gear color and removes the hover */
-.prefs-button button {fill: #b24747 !important;}
+.prefs-button button {fill: var(--main-accent-color) !important;}
 
 .prefs-button button:hover, .prefs-button button:focus {
     background-color:  transparent !important; }	
@@ -108,7 +119,7 @@ Common Browsing
 
 
 /* Changes the home screen color */
-body{ background-color: #1a1a1a !important }
+body{ background-color: var(--main-color) !important }
 
 
 
@@ -136,7 +147,7 @@ margin-bottom: 49px; }
 
 
 /* Changes the color of the wordmark */
-.wordmark { fill: #B24747 !important;}
+.wordmark { fill: var(--main-accent-color) !important;}
 }
 
 
@@ -144,9 +155,9 @@ margin-bottom: 49px; }
 /* Makes the search bar on the home screen round with red text and a red border when not clicked */
 #newtab-search-text,
   #searchSubmit{
-    fill: #b24747 !important;
+    fill: var(--main-accent-color) !important;
     border-radius: 48px !important;
-    border-color: #b24747 !important;
+    border-color: var(--main-accent-color) !important;
     box-shadow: none !important;
     background-color: none !important;
     color: none !important;
@@ -157,16 +168,16 @@ margin-bottom: 49px; }
 
 /* Changes the color of the glow when you click the search bar on the home screen */
 .search-wrapper .search-inner-wrapper:active input, .search-wrapper input:focus {
-  border: 3px solid #B24747 !important;
-  box-shadow: 0 0 7px #993d3d !important;
+  border: 3px solid var(--main-accent-color) !important;
+  box-shadow: 0 0 7px var(--glow-color) !important;
   }
 
 
 
 /* Changes the background color inside of the search bar */
 #newtab-search-text{
-  background-color: #1a1a1a !important;
-  color: #b24747 !important;
+  background-color: var(--main-color) !important;
+  color: var(--main-accent-color) !important;
 }
 
 

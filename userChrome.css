@@ -1,3 +1,29 @@
+#confirmation-hint {
+    display: none !important;
+}
+
+/* Changes the color of links in the url bar */
+.urlbarView-url {
+  overflow: hidden;
+  color: #d28888 !important;
+}
+
+
+
+/* Changes the "Search with <Engine>" text color */
+.urlbarView-title:not(:empty) ~ .urlbarView-action {
+  color: #d28888 !important;
+}
+
+
+
+.urlbarView-row:not([type=tip]):not([type=dynamic]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-title[overflow],
+.urlbarView-url[overflow] {
+  mask-image: none !important;
+}
+
+
+
 /* Inverts the red and grey when you select text in the url bar */ 
 ::selection {
 	background: #b24747 !important;
@@ -25,19 +51,12 @@
 
 
 
-/* This doesn't currently work */
-/*
-/* Changes the color of the animation when you bookmark a page
-#star-button[starred] {
-	fill: #b24747 !important;
-}
-
+/* Changes the color of the animation when you bookmark a page */
 #star-button[starred][animate] + #star-button-animatable-box > #star-button-animatable-image {
-	stroke: #b24747 !important;
-	fill: #b24747 !important;
-}
-*/
-
+    stroke: #b24747 !important;
+    fill: #b24747 !important;
+    color: #b24747 !important;
+  }
 
 
 /* Disables the blue flash when a tab loads */
@@ -271,8 +290,18 @@ tab
 	--lwt-text-color: #b24747 !important;
 	color: #B24747 !important;
 	background-color: #1a1a1a !important;
-        
+	border: 1px solid #b24747 !important;
 }
+
+/* Changes the zoom reset color */
+#appMenu-zoomReset-button {
+  min-height: unset;
+  border: none !important;
+  border-radius: 10000px;
+  padding: 1px 8px;
+  background-color: #d28888 !important;
+}
+
 	
 
 /* Changes the text color in the bookmarks bar */
