@@ -1,3 +1,11 @@
+/* Inverts the red and grey when you select text in the url bar */ 
+::selection {
+	background: #b24747 !important;
+	color: #131313 !important;
+}
+
+
+
 /* Centers bookmarks in the bookmark toolbar */
 #PlacesToolbarItems{ -moz-box-pack: center }
 
@@ -196,6 +204,30 @@ toolbarbutton.scrollbutton-down {
 
 
 
+/* Changes the animation and colors of the download button */
+#downloads-button[attention="success"]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-icon,
+#downloads-button[attention="success"]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-progress-outer {
+	fill: #b24747 !important;
+}
+
+#downloads-button[notification="start"]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-icon,
+#downloads-notification-anchor[notification="start"]>#downloads-indicator-notification {
+	fill: #b24747 !important;
+}
+
+#downloads-button[progress]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-icon,
+#downloads-button[progress]>#downloads-indicator-anchor>#downloads-indicator-progress-outer {
+	fill: #b24747 !important;
+}
+
+#downloads-button>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-progress-outer>#downloads-indicator-progress-inner {
+	fill: red !important;
+	border: 1px !important;
+	border-color: #b24747 !important;
+}
+
+
+
 /* This block makes the tabs seamless with the rest of the config's color */
 tab
 {
@@ -243,7 +275,7 @@ tab
 }
 	
 
-
+/* Changes the text color in the bookmarks bar */
 #personal-bookmarks .bookmark-item > .toolbarbutton-text {
 	text-color: #b24747 !important;
 	color: #b24747 !important; 
@@ -486,15 +518,6 @@ tab
   background-size: cover!important;
 }
 
-/* World of Succulents */
-.bookmark-item[image^="page-icon:https://worldofsucculents.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/worldofsucculents_icon.png")!important;
-  background-size: cover!important;
-}
-
 /* Indeed */
 .bookmark-item[image^="page-icon:https://www.indeed.com/"] > .toolbarbutton-icon {
   width: 0px!important;
@@ -621,7 +644,7 @@ tab
   background-size: cover!important;
 }
 
-/* NPR */
+/* BBC */
 .bookmark-item[image^="page-icon:https://www.bbc.com/"] > .toolbarbutton-icon {
   width: 0px!important;
   height: 0px!important;
@@ -656,4 +679,3 @@ tab
   background-image: url("icon/noicon_icon.png")!important;
   background-size: cover!important;
 }
-
