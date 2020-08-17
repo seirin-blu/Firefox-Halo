@@ -23,9 +23,8 @@ v3.0.0: v3.0.0 adds a lot. It adds 40 various bookmark icons specially made to m
 
 v3.1.0: This update fixes the color of the download icon and animation and makes it so that the colors in the url bar switch when text is selected.
 
+v3.5.0: Fixes the star icon animation, removes the "Added to library" dialouge, changes the color of the link and "Search with Google" text in the url bar, and fixes two of the colors of the hamburger menu.
+
 
 ## Missing Features
-* Animation when bookmarking a page needs to be colored correctly
-* "Search with Google" color in URL bar needs to be changed
-* Link color in URL bar needs to be changed
-
+* Border around hamburger menu should be red or not exist.
