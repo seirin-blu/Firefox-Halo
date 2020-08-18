@@ -25,6 +25,8 @@ v3.1.0: This update fixes the color of the download icon and animation and makes
 
 v3.5.0: Fixes the star icon animation, removes the "Added to library" dialouge, changes the color of the link and "Search with Google" text in the url bar, and fixes two of the colors of the hamburger menu.
 
+v3.6.0: Stops URL bar magnification and adds profile clarification for the different versions of Halo
+
 
 ## Missing Features
 * Border around hamburger menu should be red or not exist.
