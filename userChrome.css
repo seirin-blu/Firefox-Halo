@@ -1,8 +1,37 @@
+/*::::Firefox Halo::::*/
+
+
+
+/* This stops the URL bar from shifting up and to the right */
+#urlbar[breakout],
+#urlbar[breakout][breakout-extend] {
+  --urlbar-height: 28px !important;
+  --urlbar-toolbar-height: 30px !important;
+  width: 100% !important;
+  top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+  left: 0 !important;
+}
+
+
+
+/* This stops the URL bar from enlarging */
+#urlbar[breakout][breakout-extend] > #urlbar-input-container,
+#urlbar-input-container {
+  height: var(--urlbar-height) !important;
+  width: 100% !important;
+  padding-block: unset !important;
+  padding-inline: unset !important;
+  transition: none !important;
+}
+
+
+
+/* Removes the "Added to library" dialogue */
 #confirmation-hint {
     display: none !important;
 }
 
-/* Changes the color of links in the url bar */
+/* Changes the color of links in the URL bar */
 .urlbarView-url {
   overflow: hidden;
   color: #d28888 !important;
@@ -24,7 +53,7 @@
 
 
 
-/* Inverts the red and grey when you select text in the url bar */ 
+/* Inverts the red and grey when you select text in the URL bar */ 
 ::selection {
 	background: #b24747 !important;
 	color: #131313 !important;
@@ -85,7 +114,7 @@ toolbar#TabsToolbar
 
 
 
-/* Changes the text color when you type something into the url bar. If someone knows how to fix the blue text, please let me know */
+/* Changes the text color when you type something into the URL bar. If someone knows how to fix the blue text, please let me know */
 #urlbar{
 	box-shadow: none !important;
 	background-color: #b24747 !important;
@@ -96,7 +125,7 @@ toolbar#TabsToolbar
 }
 
 
-/* Removes the faint line above the url bar */
+/* Removes the faint line above the URL bar */
 #nav-bar {
 	box-shadow: none !important;
 	border-top: none !important;
