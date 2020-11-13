@@ -27,6 +27,8 @@ v3.5.0: Fixes the star icon animation, removes the "Added to library" dialouge, 
 
 v3.6.0: Stops URL bar magnification and adds profile clarification for the different versions of Halo
 
+v4.0.0: v4.0.0 adds a ton of new features to Firefox Halo. Among these changes is a bookmark toolbar that authides and shows, customization of several about: pages.
+
 
 ## Missing Features
 * Border around hamburger menu should be red or not exist.
