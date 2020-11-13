@@ -1,0 +1,69 @@
+@-moz-document url-prefix("about:welcome") {
+body {
+--newtab-background-color: #1a1a1a !important; /* Changes the background color */
+--newtab-card-background-color: #b24747 !important; /* Changes the card color */
+--newtab-text-primary-color: #1a1a1a !important; /* Changes the color of the card headers */
+--newtab-text-conditional-color: #1a1a1a !important; /* Changes the color of the card body text */
+
+}
+
+/* Changes some of the graphics to custom SVGs */
+.onboardingMessageImage.devices {
+  background-image: url("svg/card-illo-devices.svg") !important;
+}
+    
+.onboardingMessageImage.ffmonitor {
+    background-image: url("svg/card-illo-ffmonitor.svg") !important;
+}
+    
+.onboardingMessageImage.private {
+    background-image: url("svg/card-illo-private.svg") !important;
+}
+    
+    
+    
+/* Changes the color and weight of "Welcome to Firefox" */
+.welcomeContainer h1 {
+    font-weight: bold !important;
+    color: #b24747 !important; 
+}
+  
+    
+/* Alters the "Sign in/up/open a private window" buttons */    
+.welcomeCard .onboardingButton {
+  color: #b24747 !important;
+  background: #1a1a1a !important;
+}
+.welcomeCard .onboardingButton:focus, .welcomeCard .onboardingButton:hover {
+    color: #942929 !important ;
+    background: #1a1a1a !important; 
+}
+
+.welcomeCard .onboardingButton:active {
+    background: #1a1a1a !important; 
+}
+
+/* Alter the "Start Browsing Button" */
+.start-button {
+  font-weight: bold !important;
+  margin: 30px 0 25px;
+  background-color: #b24747 !important;
+  color: #1a1a1a !important;
+}
+.start-button:focus {
+    color: #1a1a1a !important;
+    background: #942929 !important; 
+}
+    
+.start-button:hover {
+    color: #1a1a1a !important;
+    background: #942929 !important;
+}
+    
+.start-button:active {
+    color: #1a1a1a !important;
+    background: #942929 !important;
+}
+
+
+}

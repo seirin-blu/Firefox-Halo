@@ -1,0 +1,8 @@
+<svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <ellipse ry="7" rx="7" id="svg_1" cy="7.00000" cx="7.00000" stroke-width="1.5" fill="#b24747"/>
+  <rect transform="rotate(45, 7.00000, 7.00000)" id="svg_4" height="2" width="8" y="6.00000" x="3.00000" stroke-width="1.5" fill="#1a1a1a"/>
+  <rect transform="rotate(135, 7.00000, 7.00000)" id="svg_6" height="2" width="8" y="6.00000" x="3.00000" stroke-width="1.5" fill="#1a1a1a"/>
+ </g>
+</svg>

@@ -2,6 +2,20 @@
 
 
 
+/* Imports the css for other Firefox pages */
+@import "about-about.css";
+@import "about-config.css";
+@import "about-downloads.css";
+@import "about-logins.css";
+@import "about-preferences.css";
+@import "about-protections.css";
+@import "about-robots.css";
+@import "about-welcome.css";
+
+/* Importants the css for non-Firefox pages */
+@import "google.css";
+
+
 /* This theoretically should make it so that you can just change the colors from here */
 body {
   --main-color: #1a1a1a;
@@ -9,7 +23,6 @@ body {
   --main-accent-color: #b24747;
   --glow-color: #993d3d;
 }
-
 
 
 

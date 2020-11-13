@@ -1,0 +1,346 @@
+@-moz-document url-prefix("about:preferences") {
+
+
+
+/* This changes mostly text colors but changes some background colors */
+:root {
+  --in-content-border-active-shadow: none !important;
+  --in-content-border-active: none !important;
+  --in-content-box-background-active: #1a1a1a !important; /* Background color in General application thing on selection */
+  --in-content-box-background-hover: #1a1a1a !important; /* Background color in General application thing */
+  --in-content-box-background: #1a1a1a !important; /*This HAS to be kept. */
+  --in-content-box-border-color: #b24747 !important; /*This HAS to be kept. It changes a lot of the borders */
+  --in-content-box-info-background: #1a1a1a !important; /* Changes the "You are currently syncing these items" box background color */
+  --in-content-link-color-active: #b24747 !important; /* Link color */
+  --in-content-link-color-hover: #b24747 !important; /* Link color when you hover over them */
+  --in-content-link-color-visited: #b24747 !important; /* Link color when you have visited a site */
+  --in-content-link-color: #b24747 !important;
+  --in-content-page-background: #1a1a1a !important; /* Changes the background color */
+  --in-content-page-color: #b24747 !important; /* Changes lot's of the body text color. HAS to be kept */
+  --in-content-text-color: #b24747 !important; /* This HAS to be kept as well. Too many things break otherwise. */
+  --in-content-selected-text: #1a1a1a !important; /* Changes the color of selected text in the little pop menu. HAS to be kept */
+  --in-content-item-selected: #b24747 !important; /* Changes the select color in the little pop menu. HAS to be kept */
+  --in-content-item-hover: #261010 !important; /* Changes the select color on hover in the little pop menu. HAS to be kept */
+  --in-content-deemphasized-text: #b24747 !important; /* Helps to make all text red */
+}
+
+
+    
+
+    
+/* Changes part of the background color in pop menu */
+.dialogTitleBar {
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+    
+window,
+dialog {
+  -moz-appearance: none !important;
+  background-color: #1a1a1a !important;
+  color: #b24747 !important;
+}    
+    
+    
+/* Changes the border color of the sync box */  
+.sync-group {
+  background-color: transparent !important;
+  border: 1px solid #b24747 !important;
+}
+
+/* This block changes the border on hover around the account icon */
+.fxaProfileImage.actionable:hover {
+  border-color: #b24747 !important;
+}
+
+.fxaProfileImage.actionable:hover:active {
+  border-color: #b24747 !important;
+}
+
+
+    
+/* This block changes the colors of the categories in the side bar */
+#categories > .category:hover {
+  color: #1a1a1a !important;
+  background-color: #b24747 !important;
+  border-radius: 2px !important;
+}
+
+#categories > .category:hover:active {
+  color: #1a1a1a !important;
+  background-color: #b24747 !important;
+  border-radius: 2px !important;
+}
+
+#categories > .category[selected],
+#categories > .category.selected {
+  color: #1a1a1a !important;
+  background-color: #b24747 !important;
+  border-radius: 2px !important;
+}
+
+#categories > .category[selected]:hover,
+#categories > .category.selected:hover {
+  color: #1a1a1a !important;
+  background-color: #b24747 !important;
+}
+
+#categories > .category[selected]:hover:active,
+#categories > .category.selected:hover:active {
+  color: #1a1a1a !important !important;
+  background-color: #b24747 !important;
+}
+/* ENDBLOCK */
+    
+/*Changes the background color, boder of some boxes, and some text color */    
+select[size][multiple],
+listheader,
+richlistbox {
+  -moz-appearance: none;
+  margin-inline: 0;
+  background-color: transparent!important;
+  border: 1px solid transparent !important;
+  border-radius: 2px;
+  color: #b24747 !important;
+}
+    
+
+
+/* Search bar examples in Search Preferences */ 
+.searchBarImage {
+  -moz-context-properties: fill, stroke;
+  fill: transparent !important;
+  stroke: #b24747 !important;
+}
+    
+.searchBarShownImage {
+  list-style-image: url("svg/search-bar.svg") !important;
+}
+
+.searchBarHiddenImage {
+  list-style-image: url("svg/no-search-bar.svg") !important;
+}
+    
+/* Changes the color of the "One-Click Search Engines" box and border*/
+tree {
+  border: 1px solid #b24747 !important;
+  background-color: #1a1a1a !important;
+}
+    
+treecol:not([hideheader="true"]):not(:first-child),
+treecolpicker {
+  border-image: linear-gradient(transparent 0%, transparent 20%, #b24747 20%, #b24747 80%, transparent 80%, transparent 100%) 1 1;
+}
+    
+    
+    
+/* "Find in Preferences" search box */ 
+input[type="email"],
+input[type="tel"],
+input[type="text"],
+input[type="password"],
+input[type="url"],
+input[type="number"],
+textarea,
+search-textbox {
+  -moz-appearance: none;
+  border: 1px solid #b24747 !important;
+  border-radius: 2px;
+  color: #b24747 !important;
+  background-color: transparent !important;
+}
+    
+
+/* Changes the color of a line in general preferences*/
+listheader {
+  /* border-bottom: none !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  padding-bottom: 1px !important; */
+  box-shadow: inset 0 -1px #b24747 !important;
+}
+
+/* Removes the lines between categorys on a given page */
+.subcategory:not([hidden]) ~ .subcategory {
+  border-top: 1px solid transparent !important;
+}
+    
+    
+
+/* Changes the color of a line in search preferences */
+treecols {
+  border-bottom: 1px solid #b24747 !important;
+}
+
+
+    
+/* This changes color of unselected text in the General application thing */
+treecol:not([hideheader="true"]),
+treecolpicker {
+  -moz-appearance: none !important;
+  background-color: #1a1a1a !important;
+  color: #b24747 !important;
+}
+
+
+
+/* Changes the little x icon in the search box to a custom SVG */
+/* This was a pain to get working */
+.textbox-search-clear {
+  list-style-image: url("svg/x_icon.svg") !important;
+}
+ 
+
+
+/* Changes header color */
+h1 {
+  color: #b24747 !important;
+  font-weight: bold !important; 
+}
+
+
+
+/* This block changes the colors of the check marks and radio (the circle checks) */
+checkbox[checked] > .checkbox-check {
+  /*list-style-image: url("chrome://global/skin/icons/check.svg"); with a custom path will 
+   *allow you to change the check or radio */
+  fill: #b24747 !important;
+
+}
+
+input[type="checkbox"]:checked {
+  fill: #b24747 !important;
+}
+
+.radio-check[selected] {;
+  -moz-context-properties: fill;
+  fill: #b24747 !important;
+}
+/* ENDBLOCK */
+    
+    
+
+/* Changes the background color of the check boxes and radio circles when not touched */  
+.checkbox-check,
+input[type="checkbox"] {
+  -moz-appearance: none !important;
+  border: 1px solid #b24747 !important;
+  background-color: transparent !important;
+}
+    
+.radio-check {
+  border: 1px solid #b24747 !important;
+  background-color: transparent !important;
+}
+
+
+
+/* Changes the color of the checkboxes and radio on hover */
+checkbox:not([disabled="true"]):hover > .checkbox-check,
+input[type="checkbox"]:not(:disabled):hover {
+  border-color: #b24747 !important;
+}
+
+radio:not([disabled="true"]):hover > .radio-check {
+  border-color: #b24747 !important;
+}
+    
+    
+    
+/* Changes the radio focus color */
+checkbox:-moz-focusring > .checkbox-check,
+input[type="checkbox"]:-moz-focusring + label:before,
+radio[focused="true"] > .radio-check,
+tab:-moz-focusring > .tab-middle > .tab-text {
+  outline: 2px solid #b24747 !important;
+}
+    
+
+    
+    
+
+    
+
+
+
+/* This changes background color of one of the "Settings..." buttons when not hovered */
+button,
+select,
+input[type="color"],
+menulist {
+  color: #1a1a1a !important;
+  background-color: #b24747 !important;
+}
+
+/* Not entirely sure what this does compared to the one above */
+button:enabled:hover:active,
+select:not([size]):not([multiple]):enabled:hover:active,
+input[type="color"]:enabled:hover:active,
+button:not([disabled="true"]):hover:active,
+button[open],
+button[open]:hover,
+menulist[open="true"]:not([disabled="true"]) {
+  background-color: #b24747 !important; 
+}
+
+
+
+
+
+
+
+/* "Find in Preferences" hover border color */
+/* If these break, make input html|input */
+input[type="email"]:enabled:not(:focus):hover,
+input[type="tel"]:enabled:not(:focus):hover,
+input[type="text"]:enabled:not(:focus):hover,
+input[type="password"]:enabled:not(:focus):hover,
+input[type="url"]:enabled:not(:focus):hover,
+input[type="number"]:enabled:not(:focus):hover,
+textarea:enabled:not(:focus):hover,
+search-textbox:not([disabled="true"]):not([focused]):hover {
+  border-color: #b24747;
+}
+
+
+
+/* This block changes the highlighted color of the boxes in the Privacy category */
+
+.content-blocking-category {
+  border: 1px solid #b24747 !important;
+  background-color: transparent !important;
+}
+
+
+/* Removes the background for the selected blocking category */
+.content-blocking-category.selected {
+  border: 1px solid #b24747 !important;
+  background-color: transparent !important;
+}
+
+.content-blocking-warning {
+  background-color: transparent !important;
+}
+
+/* Changes the non-hover color of the reload tabs button */
+.reload-tabs-button {
+  background-color: #b24747 !important;
+}
+
+/* Changes the non-hover color of the reload tabs button when selected */
+.reload-tabs-button:not([disabled="true"]):hover {
+  background-color: #b24747 !important;
+}
+
+/* Changes the non-hover color of the reload tabs button when selected and clicked? */
+.reload-tabs-button:not([disabled="true"]):hover:active {
+  background-color: #b24747 !important;
+}
+
+/* ENDBLOCK */
+
+
+
+
+
+}

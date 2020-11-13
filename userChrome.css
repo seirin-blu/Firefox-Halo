@@ -1,6 +1,57 @@
 /*::::Firefox Halo::::*/
 
 
+/* Removes the tiny line in the bookmarks bar */
+toolbarseparator {
+  appearance: auto;
+  -moz-default-appearance: separator;
+  margin: 3px 4px;
+  display: none !important;
+}
+
+/* Changes the little sheild icon animation in the URL bar */
+#tracking-protection-icon-box:not([hasException])[active] > #tracking-protection-icon-animatable-box > #tracking-protection-icon-animatable-image {
+  /* Overrides the default 'display: -moz-box' to prevent icon shifting issue
+     with scaled text, see Bug 1591049 */
+  background-image: url("svg/tracking-protection-animation.svg") !important;
+}
+
+
+
+/* Changes the color of "You have not granted this site any special permissions." text */
+#identity-popup-permissions-content > description,
+#protections-popup-content > description {
+  color: #b24747 !important;
+}
+
+
+
+/* changes the logo in the URL bar to Halo when you're on a Firefox page */
+#identity-box[pageproxystate="valid"].chromeUI > #identity-icon {
+  list-style-image: url("firefox_halo_red_with_paw_48.png") !important;
+}
+
+/* Changes the color of the border of the zoom button in the URL bar */
+#urlbar-zoom-button {
+  border: 1px solid #b24747 !important;
+}
+
+
+
+/* This block autohides the bookmarks bar */ 
+#PersonalToolbar {
+  visibility: collapse !important;
+  margin-bottom: -20px !important;
+  transition: all .4s ease .5s !important;
+}
+
+#navigator-toolbox:hover > #PersonalToolbar {
+  visibility: visible !important;
+  margin-bottom: 0px !important;
+  transition: all .4s ease .5s !important;
+}
+/* ENDBLOCK */
+
 
 /* This stops the URL bar from shifting up and to the right */
 #urlbar[breakout],
@@ -88,9 +139,25 @@
   }
 
 
-/* Disables the blue flash when a tab loads */
+/* This removes the flash of blue on tab load */
 .tabbrowser-tab .tab-loading-burst {
   display: none !important;
+}
+
+
+
+/* These two make it so that the throbber (the thing that goes back and forth during page loading) is the correct color*/
+/* The first one also changes the text's color for some reason */
+.tab-content[selected="true"]
+{
+
+	background-color: #1a1a1a !important;
+	font-weight: bold !important;
+	color: #b24747 !important;
+}
+
+#tabbrowser-tabs {
+  --tab-loading-fill: #b24747 !important;
 }
 
 
@@ -114,7 +181,7 @@ toolbar#TabsToolbar
 
 
 
-/* Changes the text color when you type something into the URL bar. If someone knows how to fix the blue text, please let me know */
+/* Changes the text color when you type something into the URL bar */
 #urlbar{
 	box-shadow: none !important;
 	background-color: #b24747 !important;
@@ -125,11 +192,15 @@ toolbar#TabsToolbar
 }
 
 
+
 /* Removes the faint line above the URL bar */
 #nav-bar {
 	box-shadow: none !important;
 	border-top: none !important;
 }
+
+
+
 
 /* Changes the new tab favicon */
 .tabbrowser-tab[label^="New Tab"] .tab-icon-image {
@@ -140,6 +211,8 @@ toolbar#TabsToolbar
 	background-size: 16px 16px !important;
 	background-repeat: no-repeat !important;
 }
+
+
 
 /* Changes the new private tab favicon */
 .tabbrowser-tab[label^="Private Browsing"] .tab-icon-image {
@@ -213,7 +286,7 @@ toolbarbutton.scrollbutton-down {
 
 
 /* Changes the colors in the URL bar */
-#urlbar-background {background-color: #1a1a1a !important; border-color: #b24747 !important;}
+#urlbar-background {background-color: #1a1a1a !important; border-color:#b24747 !important;}
 #urlbar-input-container {color: #b24747 !important;}
 #urlbar { 
 	background-color: #1a1a1a !important;
@@ -252,7 +325,7 @@ toolbarbutton.scrollbutton-down {
 
 
 
-/* Changes the animation and colors of the download button */
+/* This block changes the animation and colors of the download button */
 #downloads-button[attention="success"]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-icon,
 #downloads-button[attention="success"]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-progress-outer {
 	fill: #b24747 !important;
@@ -273,6 +346,30 @@ toolbarbutton.scrollbutton-down {
 	border: 1px !important;
 	border-color: #b24747 !important;
 }
+/* ENDBLOCK */
+
+/*This block changes colors inside of the downloads menu*/
+
+/* This removes the line above "Show All Downloads" */ 
+.panel-footer > xul|button {
+  border-top: 1px solid none !important;
+  /* !important overrides :hover and :active colors from button.css: */
+  color: #b24747 !important;
+}
+
+/*Changes the color of the area around "Show All Downloads" and changes the "Show All Downloads" text color*/
+.panel-footer {
+  background-color: #1a1a1a !important;
+  font-weight: bold !important;
+  color: #b24747 !important;
+}
+
+:root {
+  --arrowpanel-background: #1a1a1a !important;
+  --arrowpanel-color: #b24747 !important;
+  --arrowpanel-dimmed: none !important;
+}
+/* ENDBLOCK */
 
 
 
@@ -282,15 +379,7 @@ tab
 	height:3rem;
 	background-color: #000000 !important;
 	font-weight: thin !important;
-	color : #b24747 !important;
-}
-
-.tab-content[selected="true"]
-{
-
-	background-color: #1a1a1a !important;
-	font-weight: bold !important;
-	color : #b24747 !important;
+	color: #b24747 !important;
 }
 
 #nav-bar-customization-target {
@@ -306,21 +395,54 @@ tab
 
 
 
-/* Changes the colors in the hamburger and other menus
-*
-* I can't figure out how to change the border color of the hamburger menu. If you know, please let me know
-*
-*/
+/* This block changes the colors in the hamburger and other menus */
 .PanelUI-subView, .panel-subview-body {
 	--newtab-search-icon-color: #b24747;
 	--arrowpanel-background: none !important;
-	--arrowpanel-color: #B24747 !important;
-	--lwt-accent-color: rgb(12, 12, 13);
+	--arrowpanel-color: #b24747 !important;
+	--lwt-accent-color: #b24747 !important;
 	--lwt-text-color: #b24747 !important;
 	color: #B24747 !important;
 	background-color: #1a1a1a !important;
 	border: 1px solid #b24747 !important;
 }
+
+.PanelUI-remotetabs-clientcontainer > label[itemtype="client"] {
+  color: #b24747 !important;
+}
+
+/* Account Settings Color */
+#fxa-menu-header-description {
+  color: #b24747 !important;
+}
+
+#fxa-menu-header-title {
+  color: #b24747 !important;
+  font-weight: bold !important;
+}
+
+.PanelUI-remotetabs-clientcontainer > label[itemtype="client"] {
+  font-weight: bold !important;
+}
+
+/* Firefox Services Color */
+.subview-subheader {
+  color: #b24747 !important;
+  font-weight: bold !important;
+}
+
+/* Sync animation color */
+#PanelUI-fxa-menu-syncnow-button[syncstatus="active"] > .toolbarbutton-icon,
+#PanelUI-remotetabs-syncnow[syncstatus="active"] > .toolbarbutton-icon {
+  fill: #b24747 !important;
+}
+
+/* Send tab to device color */
+.subviewbutton[disabled="true"] {
+  color: #b24747 !important;
+}
+/* ENDBLOCK */
+
 
 /* Changes the zoom reset color */
 #appMenu-zoomReset-button {
@@ -340,6 +462,7 @@ tab
 	background-color: #1a1a1a !important
 }
   
+
 
 /* Hides the private browsing indicator */
 .private-browsing-indicator {

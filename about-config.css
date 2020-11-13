@@ -1,0 +1,17 @@
+@-moz-document url-prefix("about:config") {
+
+:root {
+  --in-content-page-background: #1a1a1a !important;
+  --in-content-page-color: #b24747 !important;
+
+}
+
+
+/* Changes the color of the slipping sign */
+.config-background {
+  background: url("svg/card-about-config.svg") no-repeat !important;
+}
+
+
+
+}
