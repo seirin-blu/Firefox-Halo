@@ -34,6 +34,15 @@ Private Browsing
 */
 @-moz-document url(about:privatebrowsing) {
 
+/* Removes the VPN ad */
+#private-browsing-vpn-text {
+    display: none !important;
+}
+
+#private-browsing-vpn-link {
+    display: none !important;
+}
+
 
 
 /* Gets rid of search bar in private browsing mode */
@@ -159,7 +168,7 @@ margin-bottom: 49px; }
 
 
 /* Changes the logo on the home screen*/
-.logo {background-image: url("firefox_halo_with_paw.png") !important;}
+.logo {background-image: url("firefox_halo_with_paw_red.png") !important;}
 
 
 
