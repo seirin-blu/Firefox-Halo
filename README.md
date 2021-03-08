@@ -29,6 +29,7 @@ v3.6.0: Stops URL bar magnification and adds profile clarification for the diffe
 
 v4.0.0: v4.0.0 adds a ton of new features to Firefox Halo. Among these changes is a bookmark toolbar that authides and shows, customization of several about: pages.
 
+v4.0.1: This is probably the last update beside future bug fixes.
 
 ## Missing Features
 * Border around hamburger menu should be red or not exist.
