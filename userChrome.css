@@ -150,10 +150,13 @@ toolbarseparator {
 /* The first one also changes the text's color for some reason */
 .tab-content[selected="true"]
 {
-
-	background-color: #1a1a1a !important;
 	font-weight: bold !important;
 	color: #b24747 !important;
+}
+
+/*background-color of selected tab*/
+.tab-background[multiselected="true"], .tab-background[selected="true"]{
+  	background: #1a1a1a !important;
 }
 
 #tabbrowser-tabs {
