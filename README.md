@@ -32,4 +32,4 @@ v4.0.0: v4.0.0 adds a ton of new features to Firefox Halo. Among these changes i
 v4.0.1: This is probably the last update beside future bug fixes.
 
 ## Missing Features
-* Border around hamburger menu should be red or not exist.
+* None ATM
