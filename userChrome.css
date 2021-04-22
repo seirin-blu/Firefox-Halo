@@ -1,5 +1,7 @@
 /*::::Firefox Halo::::*/
 
+/* Removes the little bar over the active tab when you hover */
+.tab-line{background-color: transparent !important;}
 
 /* Removes the tiny line in the bookmarks bar */
 toolbarseparator {
@@ -16,6 +18,36 @@ toolbarseparator {
   background-image: url("svg/tracking-protection-animation.svg") !important;
 }
 
+/* Changes the three sound icons */
+
+.tab-icon-overlay[soundplaying] {
+  list-style-image: url("svg/audio/tab-audio-playing-small.svg") !important;
+}
+
+.tab-icon-overlay[muted] {
+  list-style-image: url("svg/audio/tab-audio-muted-small.svg") !important;
+}
+
+.tab-icon-overlay[activemedia-blocked] {
+  list-style-image: url("svg/audio/tab-audio-blocked-small.svg") !important;
+}
+
+.tab-icon-overlay[crashed] {
+  list-style-image: url("svg/audio/crashed.svg") !important;
+}
+
+.tab-icon-sound[activemedia-blocked] {
+  list-style-image: url(svg/audio/tab-audio-playing.svg) !important;
+}
+
+.tab-icon-sound[muted] {
+  list-style-image: url(svg/audio/tab-audio-muted.svg) !important;
+}
+
+.tab-icon-sound[activemedia-blocked] {
+  list-style-image: url(svg/audio/tab-audio-blocked.svg) !important;
+}
+
 
 
 /* Changes the color of "You have not granted this site any special permissions." text */
@@ -23,7 +55,6 @@ toolbarseparator {
 #protections-popup-content > description {
   color: #b24747 !important;
 }
-
 
 
 /* changes the logo in the URL bar to Halo when you're on a Firefox page */
@@ -162,7 +193,13 @@ toolbarseparator {
 
 
 
-/* Changes the color behind of traffic light buttons (mac) */
+/* Changes the color behind of traffic light buttons and margin (mac) */
+
+.titlebar-buttonbox {
+  margin-left: 12px !important;
+  margin-right: 12px !important;
+}
+
 toolbar#TabsToolbar
 {
 	-moz-appearance: none !important;
@@ -207,7 +244,7 @@ toolbar#TabsToolbar
 	list-style-image: none !important;
 	width: 0 !important;
 	padding-left: 16px !important;
-	background: url("firefox_halo_with_paw_48.png") !important; 
+	background: url("firefox_halo_red_with_paw_48.png") !important; 
 	background-size: 16px 16px !important;
 	background-repeat: no-repeat !important;
 }
@@ -458,8 +495,8 @@ tab
 /* Changes the text color in the bookmarks bar */
 #personal-bookmarks .bookmark-item > .toolbarbutton-text {
 	text-color: #b24747 !important;
-	color: #b24747 !important; 
-	background-color: #1a1a1a !important
+	color: #b24747 !important;
+	background-color: none !important
 }
   
 
