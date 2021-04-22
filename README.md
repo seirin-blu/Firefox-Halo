@@ -14,7 +14,9 @@ Init and v1.0.0: These update are the inital commits and bug fixes to the code. 
 v2.0.0: This update is a massive overhaul to the code. This fixes bugs and adds support for a customized private browsing page. You will need to have the assets firefox_halo_with_paw_private.png and firefox_halo_with_paw_private_favicon.png downloaded and in the same location as userChrome.css and userContent.css for this update to work as intended. The others do not need to be downloaded but having them linked here may soon become a legacy feature. When it comes out, v2.5.0 will organize the code in an order that makes more sense.
 
 <<<<<<< Updated upstream
-v2.1.0 & v2.1.1: This probably destroyed everyone who was using this before this update's experience. If that's you, I'm sorry, I had to redo some structuring. v2.1.1 resolved some minor bugs.
+v2.1.0 & v2.1.1: This probably destroyed everyone who was using this before this update's experience. If that's you, I'm sorry, I had to redo some structuring. 
+
+v2.1.1 resolved some minor bugs.
 
 v2.2.0: This update resolved some very minor bugs and changed some image file names
 
@@ -34,5 +36,3 @@ v4.0.2: Fixed an error that occurs on Firefox 88 with bookmarks and added a marg
 
 ## Missing Features
 * None ATM
-=======
-v2.1.0: This probably destroyed everyone who was using this before this update's experience. If that's you, I'm sorry, I had to redo some structuring.
