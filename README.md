@@ -36,4 +36,3 @@ v4.0.2: Fixed an error that occurs on Firefox 88 with bookmarks and added a marg
 * None ATM
 =======
 v2.1.0: This probably destroyed everyone who was using this before this update's experience. If that's you, I'm sorry, I had to redo some structuring.
->>>>>>> Stashed changes
