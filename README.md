@@ -26,13 +26,15 @@ v3.1.0: This update fixes the color of the download icon and animation and makes
 
 v3.5.0: Fixes the star icon animation, removes the "Added to library" dialouge, changes the color of the link and "Search with Google" text in the url bar, and fixes two of the colors of the hamburger menu.
 
-v3.6.0: Stops URL bar magnification and adds profile clarification for the different versions of Halo
+v3.6.0: Stops URL bar magnification and adds profile clarification for the different versions of Halo.
 
 v4.0.0: v4.0.0 adds a ton of new features to Firefox Halo. Among these changes is a bookmark toolbar that authides and shows, customization of several about: pages.
 
 v4.0.1: This is probably the last update beside future bug fixes.
 
-v4.0.2: Fixed an error that occurs on Firefox 88 with bookmarks and added a margin to the right side of the traffic light icons on macOS
+v4.0.2: Fixed an error that occurs on Firefox 88 with bookmarks and added a margin to the right side of the traffic light icons on macOS.
+
+v5.0.0: Update that fixes many bugs caused by Firefox 89.
 
 ## Missing Features
 * None ATM
