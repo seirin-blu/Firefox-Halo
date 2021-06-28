@@ -1,4 +1,5 @@
 /*::::Firefox Halo::::*/
+/* The code here is honestly super disorganzied. If you organize it, I will be greatful, but I will probably do so in the future */
 
 /* Removes the little bar over the active tab when you hover */
 .tab-line{background-color: transparent !important;}
@@ -65,6 +66,7 @@ toolbarseparator {
 /* Changes the color of the border of the zoom button in the URL bar */
 #urlbar-zoom-button {
   border: 1px solid #b24747 !important;
+  padding: 0px 7px !important;
 }
 
 
@@ -119,6 +121,10 @@ toolbarseparator {
   color: #d28888 !important;
 }
 
+/* Changes the general link color */
+.text-link {
+  color: #b24747 !important;
+}
 
 
 /* Changes the "Search with <Engine>" text color */
@@ -326,9 +332,18 @@ toolbarbutton.scrollbutton-down {
 #urlbar-background {background-color: #1a1a1a !important; border-color:#b24747 !important;}
 #urlbar-input-container {color: #b24747 !important;}
 #urlbar { 
-	background-color: #1a1a1a !important;
+  background-color: #1a1a1a !important;
 }
 
+/* Fixes the reload animation color */
+.toolbarbutton-animatable-box, .toolbarbutton-1 {
+  fill: #b24747 !important;
+}
+
+/* removes the weird shape of the background hover over tabs */
+.tab-background {
+  display: none !important;
+}
 
 /* Removes the line between tabs */
 .tabbrowser-tab::before, 
@@ -336,7 +351,19 @@ toolbarbutton.scrollbutton-down {
 	display: none !important;
 }
 
+/* These two remove the weird vertical color bars between tabs*/
+:root:not([lwtheme-mozlightdark]) #TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background:-moz-lwtheme {
+    display: none;
+}
 
+#TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background {
+    display: none;
+}
+
+/* Removes the weird spaces between tabs*/
+.tabbrowser-tab {
+  padding-inline: 0 !important;
+}
 
 /* Changes the tab topline color */
 .tabbrowser-tab {
@@ -405,6 +432,9 @@ toolbarbutton.scrollbutton-down {
   --arrowpanel-background: #1a1a1a !important;
   --arrowpanel-color: #b24747 !important;
   --arrowpanel-dimmed: none !important;
+  --arrowpanel-field-background: #1a1a1a !important;
+  --panel-separator-color: #b24747 !important;
+  --toolbarbutton-icon-fill-attention: var(--lwt-toolbarbutton-icon-fill-attention, #b24747) !important; 
 }
 /* ENDBLOCK */
 
@@ -422,6 +452,96 @@ tab
 #nav-bar-customization-target {
 	background-color: #b24747 !important;
 }
+/* ENDBLOCK */
+
+
+
+/* This block changes the tracking protection menu */
+
+/* Changes the little arrow going to the URL bar */
+/* This is not working right now for some reason */
+#protections-popup[mainviewshowing][side=top]::part(arrow) {
+  fill: #1a1a1a !important;
+}
+
+/* Changes the background colors and some text colors */
+#protections-popup-mainView-panel-header-section {
+  color: #b24747 !important;
+  background: radial-gradient(circle farthest-side at top right, #333333, #1a1a1a) !important;
+}
+
+/* Changes the color of most of the text*/
+#protections-popup-message {
+  background-image: url(svg/hero-message-background.svg) !important;
+  color: #b24747 !important;
+}
+
+/* Changes the color of the circle of the binary switch */
+.protections-popup-tp-switch::before {
+  background: #1a1a1a !important;
+}
+
+/* The 6 of these change the background color both not and on hover */
+.protections-popup-tp-switch {
+  background-color: #b24747 !important;
+  border: 1px solid #1a1a1a !important;
+}
+
+.protections-popup-tp-switch::before {
+  background: #1a1a1a !important;
+  outline: 1px solid b24747 !important;
+}
+
+.protections-popup-tp-switch[enabled]:hover {
+  background-color: #b24747 !important;
+}
+
+.protections-popup-tp-switch[enabled]:hover:active {
+  background-color: #b24747 !important;
+}
+
+.protections-popup-tp-switch:not([enabled]):hover {
+  background-color: #b24747 !important;
+}
+
+.protections-popup-tp-switch:not([enabled]):hover:active {
+  background-color: #b24747 !important;
+}
+
+/* The two of these change the "caution" section color*/
+#protections-popup[hasException] #protections-popup-tp-switch-section {
+  background: repeating-linear-gradient(
+    -56deg,
+    #333333,
+    #333333 10px,
+    transparent 10px,
+    transparent 20px
+  ) !important;
+}
+
+:root[lwt-popup-brighttext] #protections-popup[hasException] #protections-popup-tp-switch-section {
+  background: repeating-linear-gradient(
+    -56deg,
+    #333333,
+    #333333 10px,
+    transparent 10px,
+    transparent 20px
+  ) !important;
+}
+/* Changes the "No known trackers..." text color */
+#protections-popup-no-trackers-found-description {
+  color: #b24747!important;
+}
+
+/* These two change the "Custom" and "# Blocked" text */
+#protections-popup-trackers-blocked-counter-description {
+  color: #b24747 !important;
+}
+
+#protections-popup-footer-protection-type-label {
+    color: #b24747 !important;
+}
+
 /* ENDBLOCK */
 
 
@@ -447,6 +567,9 @@ tab
 .PanelUI-remotetabs-clientcontainer > label[itemtype="client"] {
   color: #b24747 !important;
 }
+/* ENDBLOCK */
+
+
 
 /* Account Settings Color */
 #fxa-menu-header-description {
@@ -499,7 +622,28 @@ tab
 	background-color: none !important
 }
   
+/* This block changes the colors of the "Edit This Bookmark" popup */
+.panel-footer > xul|button:not([disabled])[default] {
+  color: #1a1a1a !important;
+  background-color: #b24747 !important;
+}
 
+.panel-footer > xul|button:not([disabled])[default]:hover {
+  background-color: #b24747 !important;
+}
+
+.panel-footer > xul|button:not([disabled])[default]:hover:active {
+  background-color: #b24747 !important;
+}
+
+/* Changes the text & border color of some elements*/
+#editBookmarkPanelRows > vbox > html|input,
+#editBookmarkPanelRows > vbox > hbox > html|input {
+  background-color: #1a1a1a !important;
+  border: 1px solid #b24747 !important;
+}
+
+/* ENDBLOCK */
 
 /* Hides the private browsing indicator */
 .private-browsing-indicator {

@@ -4,6 +4,7 @@
 
 /* Imports the css for other Firefox pages */
 @import "about-about.css";
+@import "about-addons.css";
 @import "about-config.css";
 @import "about-downloads.css";
 @import "about-logins.css";
@@ -22,6 +23,7 @@ body {
   --private-main-color: #261010; /* This one does not work for some reason*/
   --main-accent-color: #b24747;
   --glow-color: #993d3d;
+  --newtab-textbox-background-color: var(--main-accent-color);
 }
 
 
@@ -100,9 +102,15 @@ Common Browsing
 */
 @-moz-document url(about:newtab), url(about:home), url(about:blank) { 
 
+/* Gets rid of the dumb "Personalize" button on the home page */
+.personalize-button {
+ display: none;
+ }
+
 
 
 /* Makes the search bar on the home screen round with red text and a red border when not clicked */
+/* Proton breaks this */
 #newtab-search-text,
   #searchSubmit{
     fill: var(--main-accent-color) !important;
@@ -114,6 +122,21 @@ Common Browsing
     font-family: helvetica !important
   }
   
+/* This mostly fixes what Proton broke*/
+.outer-wrapper.newtab-experience .search-wrapper .search-handoff-button, .outer-wrapper.newtab-experience .search-wrapper input {
+    background: #1a1a1a var(--newtab-search-icon) 16px center no-repeat !important;
+    padding-inline-start: 0 !important;
+    padding-inline-end: 0 !important;
+    border: 1px solid #b24747 !important;
+    border-radius: 50px !important;
+    color: #b24747 !important;
+}
+
+/* Aligns the fake-textbox to the center */
+.search-handoff-button .fake-textbox {
+    opacity: 1 !important;
+    text-align: center !important;
+}
 
 
 /* Changes the color of the glow when you click the search bar on the home screen */
@@ -121,6 +144,7 @@ Common Browsing
   border: 3px solid var(--main-accent-color) !important;
   box-shadow: 0 0 7px var(--glow-color) !important;
   }
+
 
 
 /* Changes the background color inside of the search bar */
