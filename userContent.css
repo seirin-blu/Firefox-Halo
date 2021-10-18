@@ -108,30 +108,25 @@ Common Browsing
  }
 
 
-
+    
+/* Changes the gear on the home page to be red*/
+.icon {
+    color: var(--main-accent-color) !important;
+}    
+    
+    
+    
 /* Makes the search bar on the home screen round with red text and a red border when not clicked */
-/* Proton breaks this */
-#newtab-search-text,
-  #searchSubmit{
-    fill: var(--main-accent-color) !important;
-    border-radius: 48px !important;
-    border-color: var(--main-accent-color) !important;
+.outer-wrapper.newtab-experience .search-wrapper .search-handoff-button,
+.outer-wrapper.newtab-experience .search-wrapper input {
+    background-color: var(--main-color) !important;
     box-shadow: none !important;
-    background-color: none !important;
-    color: none !important;
-    font-family: helvetica !important
-  }
-  
-/* This mostly fixes what Proton broke*/
-.outer-wrapper.newtab-experience .search-wrapper .search-handoff-button, .outer-wrapper.newtab-experience .search-wrapper input {
-    background: #1a1a1a var(--newtab-search-icon) 16px center no-repeat !important;
-    padding-inline-start: 0 !important;
-    padding-inline-end: 0 !important;
-    border: 1px solid #b24747 !important;
-    border-radius: 50px !important;
-    color: #b24747 !important;
-}
-
+    border-radius: 100px !important;
+    border-color: var(--main-accent-color) !important;
+    color: var(--main-accent-color) !important;
+}   
+    
+    
 /* Aligns the fake-textbox to the center */
 .search-handoff-button .fake-textbox {
     opacity: 1 !important;
@@ -245,15 +240,3 @@ justify-content: center;
 margin-bottom: 49px; }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
