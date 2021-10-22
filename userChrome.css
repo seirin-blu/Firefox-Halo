@@ -59,9 +59,46 @@ toolbarseparator {
 
 
 /* changes the logo in the URL bar to Halo when you're on a Firefox page */
-#identity-box[pageproxystate="valid"].chromeUI > #identity-icon {
-  list-style-image: url("firefox_halo_red_with_paw_48.png") !important;
+#identity-box[pageproxystate="valid"].chromeUI #identity-icon {
+    list-style-image: url("firefox_halo_red_with_paw_48.png") !important;
 }
+
+/* These three remove the white color around the firefox logo in the URLbar*/
+#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button, #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button, #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button, #urlbar-label-box {
+    background-color: transparent !important;
+}
+
+#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button:hover:not([open]), #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button:hover:not([open]), #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button:hover:not([open]) {
+    background-color: transparent !important;
+}
+
+#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button:hover:active, #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button[open="true"], #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button:hover:active, #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button[open="true"], #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button:hover:active, #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button[open="true"] {
+    background-color: transparent !important;
+}
+
+
+
+
+/* Removes the dumb line above the search items along with their padding */
+/* Top one */
+#urlbar[open] > .urlbarView > .urlbarView-body-outer > .urlbarView-body-inner {
+  border-top: none !important;
+}
+
+.urlbarView-results {
+    padding-block: 0px !important;
+}
+
+/* Bottom one */
+.urlbarView:not([noresults]) > .search-one-offs:not([hidden]) {
+    border-top: none !important;
+}
+
+#urlbar .search-one-offs:not([hidden]) {
+    padding-block: 0px !important;
+}
+
+
 
 /* Changes the color of the border of the zoom button in the URL bar */
 #urlbar-zoom-button {
@@ -96,6 +133,12 @@ toolbarseparator {
   left: 0 !important;
 }
 
+/* Changes the color of the focused URLbar*/
+#urlbar[focused="true"]:not([suppress-focus-border]) > #urlbar-background,
+#searchbar:focus-within {
+  outline-color: #b24747 !important;
+  border-color: transparent;
+}
 
 
 /* This stops the URL bar from enlarging */
@@ -134,11 +177,32 @@ toolbarseparator {
 
 
 
-.urlbarView-row:not([type=tip]):not([type=dynamic]) > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-title[overflow],
-.urlbarView-url[overflow] {
-  mask-image: none !important;
+/* Gets rid of the ugly white when hovering */
+.urlbarView-row:not([type="tip"], [type="dynamic"], [has-help]):hover > .urlbarView-row-inner, .urlbarView-row[has-help] > .urlbarView-row-inner:not([selected]):hover {
+    background-color: transparent !important;
 }
 
+.urlbarView-row:not([type="tip"], [type="dynamic"], [has-help]):hover > .urlbarView-row-inner, .urlbarView-row[has-help] > .urlbarView-row-inner:not([selected]) {
+    background-color: transparent !important;
+}
+
+.urlbarView-row:not([type="tip"], [type="dynamic"])[selected] > .urlbarView-row-inner, .urlbarView-row-inner[selected] {
+    background-color: transparent !important;
+    color: #b24747 !important;
+}
+
+.searchbar-engine-one-off-item:not([selected]):hover {
+    background-color: transparent !important;
+    color: inherit;
+}
+
+:root:not(:-moz-lwtheme) #urlbar:not([focused="true"]) {
+    --urlbar-box-bgcolor: #1a1a1a !important;
+}
+
+#urlbar:is([focused="true"], [open]) > #urlbar-background, #searchbar:focus-within {
+    background-color: #1a1a1a !important;
+}
 
 
 /* Inverts the red and grey when you select text in the URL bar */ 
@@ -159,6 +223,10 @@ toolbarseparator {
 	background-color: #none !important;
 }
 
+/* Changes the little arrow that some times appears to red*/
+#tabbrowser-arrowscrollbox::part(scrollbutton-up), #tabbrowser-arrowscrollbox::part(scrollbutton-down) {
+    fill: #b24747 !important;
+}
 
 
 /* Changes the color of the star button on websites you can bookmark */
@@ -1039,5 +1107,77 @@ tab
   height: 0px!important;
   padding: 0 0 16px 16px!important;
   background-image: url("icon/noicon_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* OnPoint */
+.bookmark-item[image^="page-icon:https://www.onpointcu.com"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/onpoint_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Faithful */
+.bookmark-item[image^="page-icon:https://faithful.team"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/faithful_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Faithful Tweaks */
+.bookmark-item[image^="page-icon:https://faithfultweaks.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/faithful_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Faithful Site Editor */
+.bookmark-item[image^="page-icon:https://alexeykrainev.ghost.io"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/faithful_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* World of Succulents */
+.bookmark-item[image^="page-icon:https://worldofsucculents.com/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/worldofsucculents_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* MCECS */
+.bookmark-item[image^="page-icon:https://intranet.cecs.pdx.edu/home/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/MCECS_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* D2L */
+.bookmark-item[image^="page-icon:https://d2l.pdx.edu/d2l/home"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/D2L_icon.png")!important;
+  background-size: cover!important;
+}
+
+/* Comlpliance */
+.bookmark-item[image^="page-icon:https://compliancepack.net/"] > .toolbarbutton-icon {
+  width: 0px!important;
+  height: 0px!important;
+  padding: 0 0 16px 16px!important;
+  background-image: url("icon/compliance_icon.png")!important;
   background-size: cover!important;
 }
