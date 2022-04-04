@@ -35,5 +35,7 @@ v4.0.2: Fixed an error that occurs on Firefox 88 with bookmarks and added a marg
 
 v5.0.0: Update that fixes many bugs caused by Firefox 89.
 
+v5.1.0: Fixed some small stuff and changed tabs appearance.
+
 ## Missing/Broken Features
 * With Firefox 94, the search wrapper is broken *again*. I really wish they'd stop chaning the search wrapper's css with each update.
