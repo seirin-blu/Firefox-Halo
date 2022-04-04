@@ -1,0 +1,42 @@
+@-moz-document  url-prefix("https://d2l.pdx.edu/d2l/home") {
+
+:root {
+--d2l-tabs-background-color: #262626 !important;
+  
+}
+
+.d2l-navigation-s {
+    background-color: #131313 !important;
+}
+
+
+.d2l-tiles-container {
+    background-color: #131313 !important;
+}
+
+d2l-branding-navigation-background-color {
+    background-color: #131313 !important;
+}
+
+.d2l-tiles-container {
+    background-color: #262626 !important;
+}
+
+.d2l-tile {
+    background-color: #131313 !important;
+}
+
+.daylight .d2l-msg-container {
+    background-color: #262626 !important;
+    border: none !important;
+}
+
+d2l-typography {
+    color: #efefef !important;
+}
+
+.d2l-branding-navigation-dark-foreground-color a.d2l-navigation-s-link, .d2l-branding-navigation-dark-foreground-color a.d2l-navigation-s-link:link, .d2l-branding-navigation-dark-foreground-color a.d2l-navigation-s-link:visited, .d2l-branding-navigation-dark-foreground-color div.d2l-navigation-s-item > span {
+    color: #efefef !important;
+}
+
+}

@@ -117,15 +117,21 @@ Common Browsing
     
     
 /* Makes the search bar on the home screen round with red text and a red border when not clicked */
-.outer-wrapper.newtab-experience .search-wrapper .search-handoff-button,
-.outer-wrapper.newtab-experience .search-wrapper input {
-    background-color: var(--main-color) !important;
+.search-wrapper .search-handoff-button, .search-wrapper input {
+    background: #1a1a1a !important;
+    background-size: 24px;
+    padding-inline-start: 52px;
+    padding-inline-end: 10px;
+    padding-block: 0;
+    width: 100%;
     box-shadow: none !important;
-    border-radius: 100px !important;
-    border-color: var(--main-accent-color) !important;
-    color: var(--main-accent-color) !important;
-}   
+    border: 1px solid #b24747 !important;
+    border-radius: 30px !important;
+}
     
+.search-wrapper .search-handoff-button {
+    color: #b24747 !important;
+}
     
 /* Aligns the fake-textbox to the center */
 .search-handoff-button .fake-textbox {
@@ -240,3 +246,15 @@ justify-content: center;
 margin-bottom: 49px; }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
