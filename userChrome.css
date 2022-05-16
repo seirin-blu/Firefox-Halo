@@ -278,7 +278,7 @@ toolbarseparator {
 toolbar#TabsToolbar
 {
 	-moz-appearance: none !important;
-	background-color: #1a1a1a !important;
+	background-color: #000000 !important;
 }
 
 #TabsToolbar .toolbarbutton-1 {
