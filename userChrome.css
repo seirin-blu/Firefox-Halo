@@ -12,6 +12,12 @@ toolbarseparator {
   display: none !important;
 }
 
+/* Removes the little "look at other tabs" thing */
+#TabsToolbar .toolbarbutton-1 {
+  margin: 0 0 var(--tabs-navbar-shadow-size);
+  display: none !important;
+}
+
 /* Changes the little sheild icon animation in the URL bar */
 #tracking-protection-icon-box:not([hasException])[active] > #tracking-protection-icon-animatable-box > #tracking-protection-icon-animatable-image {
   /* Overrides the default 'display: -moz-box' to prevent icon shifting issue
@@ -1198,12 +1204,12 @@ tab
   background-size: cover!important;
 }
 
-/* Faithful */
-.bookmark-item[image^="page-icon:https://faithfulpack.net/"] > .toolbarbutton-icon {
+/* Comlpliance */
+.bookmark-item[image^="page-icon:https://compliancepack.net/"] > .toolbarbutton-icon {
   width: 0px!important;
   height: 0px!important;
   padding: 0 0 16px 16px!important;
-  background-image: url("icon/faithful_icon.png")!important;
+  background-image: url("icon/compliance_icon.png")!important;
   background-size: cover!important;
 }
 
