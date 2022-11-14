@@ -13,8 +13,8 @@ toolbarseparator {
 }
 
 /* Removes the little "look at other tabs" thing */
-#TabsToolbar .toolbarbutton-1 {
-  margin: 0 0 var(--tabs-navbar-shadow-size);
+#alltabs-button {
+  list-style-image: url(chrome://global/skin/icons/arrow-down.svg);
   display: none !important;
 }
 
