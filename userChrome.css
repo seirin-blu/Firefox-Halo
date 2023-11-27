@@ -1,8 +1,9 @@
 /*::::Firefox Halo::::*/
-/* The code here is honestly super disorganzied. If you organize it, I will be greatful, but I will probably do so in the future */
 
 /* Removes the little bar over the active tab when you hover */
-.tab-line{background-color: transparent !important;}
+.tab-line {
+  background-color: transparent !important;
+}
 
 /* Removes the tiny line in the bookmarks bar */
 toolbarseparator {
@@ -19,7 +20,9 @@ toolbarseparator {
 }
 
 /* Changes the little sheild icon animation in the URL bar */
-#tracking-protection-icon-box:not([hasException])[active] > #tracking-protection-icon-animatable-box > #tracking-protection-icon-animatable-image {
+#tracking-protection-icon-box:not([hasException])[active]
+  > #tracking-protection-icon-animatable-box
+  > #tracking-protection-icon-animatable-image {
   /* Overrides the default 'display: -moz-box' to prevent icon shifting issue
      with scaled text, see Bug 1591049 */
   background-image: url("svg/tracking-protection-animation.svg") !important;
@@ -55,35 +58,48 @@ toolbarseparator {
   list-style-image: url(svg/audio/tab-audio-blocked.svg) !important;
 }
 
-
-
 /* Changes the color of "You have not granted this site any special permissions." text */
 #identity-popup-permissions-content > description,
 #protections-popup-content > description {
   color: #b24747 !important;
 }
 
-
 /* changes the logo in the URL bar to Halo when you're on a Firefox page */
 #identity-box[pageproxystate="valid"].chromeUI #identity-icon {
-    list-style-image: url("firefox_halo_red_with_paw_48.png") !important;
+  list-style-image: url("firefox_halo_red_with_paw_48.png") !important;
 }
 
 /* These three remove the white color around the firefox logo in the URLbar*/
-#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button, #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button, #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button, #urlbar-label-box {
-    background-color: transparent !important;
+#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button,
+#identity-box[pageproxystate="valid"].chromeUI > .identity-box-button,
+#identity-box[pageproxystate="valid"].extensionPage > .identity-box-button,
+#urlbar-label-box {
+  background-color: transparent !important;
 }
 
-#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button:hover:not([open]), #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button:hover:not([open]), #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button:hover:not([open]) {
-    background-color: transparent !important;
+#identity-box[pageproxystate="valid"].notSecureText
+  > .identity-box-button:hover:not([open]),
+#identity-box[pageproxystate="valid"].chromeUI
+  > .identity-box-button:hover:not([open]),
+#identity-box[pageproxystate="valid"].extensionPage
+  > .identity-box-button:hover:not([open]) {
+  background-color: transparent !important;
 }
 
-#identity-box[pageproxystate="valid"].notSecureText > .identity-box-button:hover:active, #identity-box[pageproxystate="valid"].notSecureText > .identity-box-button[open="true"], #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button:hover:active, #identity-box[pageproxystate="valid"].chromeUI > .identity-box-button[open="true"], #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button:hover:active, #identity-box[pageproxystate="valid"].extensionPage > .identity-box-button[open="true"] {
-    background-color: transparent !important;
+#identity-box[pageproxystate="valid"].notSecureText
+  > .identity-box-button:hover:active,
+#identity-box[pageproxystate="valid"].notSecureText
+  > .identity-box-button[open="true"],
+#identity-box[pageproxystate="valid"].chromeUI
+  > .identity-box-button:hover:active,
+#identity-box[pageproxystate="valid"].chromeUI
+  > .identity-box-button[open="true"],
+#identity-box[pageproxystate="valid"].extensionPage
+  > .identity-box-button:hover:active,
+#identity-box[pageproxystate="valid"].extensionPage
+  > .identity-box-button[open="true"] {
+  background-color: transparent !important;
 }
-
-
-
 
 /* Removes the dumb line above the search items along with their padding */
 /* Top one */
@@ -92,19 +108,17 @@ toolbarseparator {
 }
 
 .urlbarView-results {
-    padding-block: 0px !important;
+  padding-block: 0px !important;
 }
 
 /* Bottom one */
 .urlbarView:not([noresults]) > .search-one-offs:not([hidden]) {
-    border-top: none !important;
+  border-top: none !important;
 }
 
 #urlbar .search-one-offs:not([hidden]) {
-    padding-block: 0px !important;
+  padding-block: 0px !important;
 }
-
-
 
 /* Changes the color of the border of the zoom button in the URL bar */
 #urlbar-zoom-button {
@@ -112,22 +126,20 @@ toolbarseparator {
   padding: 0px 7px !important;
 }
 
-
-
-/* This block autohides the bookmarks bar */ 
+/* This block autohides the bookmarks bar */
 #PersonalToolbar {
   visibility: collapse !important;
   margin-bottom: -20px !important;
-  transition: all .4s ease .5s !important;
+  transition: all 0.4s ease 0.5s !important;
 }
 
 #navigator-toolbox:hover > #PersonalToolbar {
   visibility: visible !important;
   margin-bottom: 0px !important;
-  transition: all .4s ease .5s !important;
+  transition: all 0.4s ease 0.5s !important;
 }
-/* ENDBLOCK */
 
+/* ENDBLOCK */
 
 /* This stops the URL bar from shifting up and to the right */
 #urlbar[breakout],
@@ -135,7 +147,9 @@ toolbarseparator {
   --urlbar-height: 28px !important;
   --urlbar-toolbar-height: 30px !important;
   width: 100% !important;
-  top: calc((var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2) !important;
+  top: calc(
+    (var(--urlbar-toolbar-height) - var(--urlbar-height)) / 2
+  ) !important;
   left: 0 !important;
 }
 
@@ -145,7 +159,6 @@ toolbarseparator {
   outline-color: #b24747 !important;
   border-color: transparent;
 }
-
 
 /* This stops the URL bar from enlarging */
 #urlbar[breakout][breakout-extend] > #urlbar-input-container,
@@ -157,11 +170,9 @@ toolbarseparator {
   transition: none !important;
 }
 
-
-
 /* Removes the "Added to library" dialogue */
 #confirmation-hint {
-    display: none !important;
+  display: none !important;
 }
 
 /* Changes the color of links in the URL bar */
@@ -175,104 +186,99 @@ toolbarseparator {
   color: #b24747 !important;
 }
 
-
 /* Changes the "Search with <Engine>" text color */
 .urlbarView-title:not(:empty) ~ .urlbarView-action {
   color: #d28888 !important;
 }
 
-
-
 /* Gets rid of the ugly white when hovering */
-.urlbarView-row:not([type="tip"], [type="dynamic"], [has-help]):hover > .urlbarView-row-inner, .urlbarView-row[has-help] > .urlbarView-row-inner:not([selected]):hover {
-    background-color: transparent !important;
+.urlbarView-row:not([type="tip"], [type="dynamic"], [has-help]):hover
+  > .urlbarView-row-inner,
+.urlbarView-row[has-help] > .urlbarView-row-inner:not([selected]):hover {
+  background-color: transparent !important;
 }
 
-.urlbarView-row:not([type="tip"], [type="dynamic"], [has-help]):hover > .urlbarView-row-inner, .urlbarView-row[has-help] > .urlbarView-row-inner:not([selected]) {
-    background-color: transparent !important;
+.urlbarView-row:not([type="tip"], [type="dynamic"], [has-help]):hover
+  > .urlbarView-row-inner,
+.urlbarView-row[has-help] > .urlbarView-row-inner:not([selected]) {
+  background-color: transparent !important;
 }
 
-.urlbarView-row:not([type="tip"], [type="dynamic"])[selected] > .urlbarView-row-inner, .urlbarView-row-inner[selected] {
-    background-color: transparent !important;
-    color: #b24747 !important;
+.urlbarView-row:not([type="tip"], [type="dynamic"])[selected]
+  > .urlbarView-row-inner,
+.urlbarView-row-inner[selected] {
+  background-color: transparent !important;
+  color: #b24747 !important;
 }
 
 .searchbar-engine-one-off-item:not([selected]):hover {
-    background-color: transparent !important;
-    color: inherit;
+  background-color: transparent !important;
+  color: inherit;
 }
 
 :root:not(:-moz-lwtheme) #urlbar:not([focused="true"]) {
-    --urlbar-box-bgcolor: #1a1a1a !important;
+  --urlbar-box-bgcolor: #1a1a1a !important;
 }
 
-#urlbar:is([focused="true"], [open]) > #urlbar-background, #searchbar:focus-within {
-    background-color: #1a1a1a !important;
+#urlbar:is([focused="true"], [open]) > #urlbar-background,
+#searchbar:focus-within {
+  background-color: #1a1a1a !important;
 }
 
-
-/* Inverts the red and grey when you select text in the URL bar */ 
+/* Inverts the red and grey when you select text in the URL bar */
 ::selection {
-	background: #b24747 !important;
-	color: #131313 !important;
+  background: #b24747 !important;
+  color: #131313 !important;
 }
-
-
 
 /* Centers bookmarks in the bookmark toolbar */
-#PlacesToolbarItems{ -moz-box-pack: center }
-
-
+#PlacesToolbarItems {
+  -moz-box-pack: center;
+}
 
 /* Changes the color of the space to the right of open tabs */
 #tabbrowser-tabs {
-	background-color: #none !important;
+  background-color: none !important;
 }
 
 /* Changes the little arrow that some times appears to red*/
-#tabbrowser-arrowscrollbox::part(scrollbutton-up), #tabbrowser-arrowscrollbox::part(scrollbutton-down) {
-    fill: #b24747 !important;
+#tabbrowser-arrowscrollbox::part(scrollbutton-up),
+#tabbrowser-arrowscrollbox::part(scrollbutton-down) {
+  fill: #b24747 !important;
 }
-
 
 /* Changes the color of the star button on websites you can bookmark */
-#star-button	{
-	fill: #b24747 !important;
+#star-button {
+  fill: #b24747 !important;
 }
 
-
-
 /* Changes the color of the animation when you bookmark a page */
-#star-button[starred][animate] + #star-button-animatable-box > #star-button-animatable-image {
-    stroke: #b24747 !important;
-    fill: #b24747 !important;
-    color: #b24747 !important;
-  }
-
+#star-button[starred][animate]
+  + #star-button-animatable-box
+  > #star-button-animatable-image {
+  stroke: #b24747 !important;
+  fill: #b24747 !important;
+  color: #b24747 !important;
+}
 
 /* This removes the flash of blue on tab load */
 .tabbrowser-tab .tab-loading-burst {
   display: none !important;
 }
 
-
-
 /* These two make it so that the throbber (the thing that goes back and forth during page loading) is the correct color*/
 /* The first one also changes the text's color for some reason */
-.tab-content[selected="true"]
-{
-    border-radius: 9px !important;
-    border: solid #000000 !important;
-	background-color: #1a1a1a !important;
-	font-weight: bold !important;
-	color: #b24747 !important;
+.tab-content[selected="true"] {
+  border-radius: 9px !important;
+  border: solid #000000 !important;
+  background-color: #1a1a1a !important;
+  font-weight: bold !important;
+  color: #b24747 !important;
 }
 
 #tabbrowser-tabs {
   --tab-loading-fill: #b24747 !important;
 }
-
-
 
 /* Changes the color behind of traffic light buttons and margin (mac) */
 
@@ -281,127 +287,170 @@ toolbarseparator {
   margin-right: 12px !important;
 }
 
-toolbar#TabsToolbar
-{
-	-moz-appearance: none !important;
-	background-color: #000000 !important;
+toolbar#TabsToolbar {
+  -moz-appearance: none !important;
+  background-color: #000000 !important;
 }
 
 #TabsToolbar .toolbarbutton-1 {
-    margin: 0 0 var(--tabs-navbar-shadow-size) !important;
-    padding: 2px !important;
-    
+  margin: 0 0 var(--tabs-navbar-shadow-size) !important;
+  padding: 2px !important;
 }
 
 #TabsToolbar .toolbarbutton-1:hover {
-    margin: 0 0 var(--tabs-navbar-shadow-size) !important;
-    padding: 2px !important;
-    background-color: #000000 !important;
+  margin: 0 0 var(--tabs-navbar-shadow-size) !important;
+  padding: 2px !important;
+  background-color: #000000 !important;
 }
-
 
 /* Gets rid of the space on the top of the window that's not taken up by tabs */
 .titlebar-spacer[type="pre-tabs"],
 .titlebar-spacer[type="post-tabs"] {
-	display: none !important;
-	width: 0px !important;
-	max-width: 0px !important;
+  display: none !important;
+  width: 0px !important;
+  max-width: 0px !important;
 }
-
-
 
 /* Changes the text color when you type something into the URL bar */
-#urlbar{
-	box-shadow: none !important;
-	background-color: #b24747 !important;
-	background: #1a1a1a !important;
-	border: none !important;
-	color : #b24747 !important;
-	font-weight: bold !important;
+#urlbar {
+  box-shadow: none !important;
+  background-color: #b24747 !important;
+  background: #1a1a1a !important;
+  border: none !important;
+  color: #b24747 !important;
+  font-weight: bold !important;
 }
-
-
 
 /* Removes the faint line above the URL bar */
 #nav-bar {
-	box-shadow: none !important;
-	border-top: none !important;
+  box-shadow: none !important;
+  border-top: none !important;
 }
-
-
-
 
 /* Changes the new tab favicon */
 .tabbrowser-tab[label^="New Tab"] .tab-icon-image {
-	list-style-image: none !important;
-	width: 0 !important;
-	padding-left: 16px !important;
-	background: url("firefox_halo_red_with_paw_48.png") !important; 
-	background-size: 16px 16px !important;
-	background-repeat: no-repeat !important;
+  list-style-image: none !important;
+  width: 0 !important;
+  padding-left: 16px !important;
+  background: url("firefox_halo_red_with_paw_48.png") !important;
+  background-size: 16px 16px !important;
+  background-repeat: no-repeat !important;
 }
-
-
 
 /* Changes the new private tab favicon */
 .tabbrowser-tab[label^="Private Browsing"] .tab-icon-image {
-	list-style-image: none !important;
-	width: 0 !important;
-	padding-left: 16px !important;
-	background: url("firefox_halo_with_paw_private_favicon.png") !important; 
-	background-size: 16px 16px !important;
-	background-repeat: no-repeat !important;
+  list-style-image: none !important;
+  width: 0 !important;
+  padding-left: 16px !important;
+  background: url("firefox_halo_with_paw_private_favicon.png") !important;
+  background-size: 16px 16px !important;
+  background-repeat: no-repeat !important;
 }
-
-
 
 /* Changes the color of the bookmarks toolbar */
 #PersonalToolbar {
-	background-color: #1a1a1a !important;
-        color: #b24747 !important;
+  background-color: #1a1a1a !important;
+  color: #b24747 !important;
 }
 
-#PersonalToolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover, #tabbrowser-arrowscrollbox:not([scrolledtostart="true"])::part(scrollbutton-up):hover, #tabbrowser-arrowscrollbox:not([scrolledtoend="true"])::part(scrollbutton-down):hover, toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover, toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover > .toolbarbutton-icon, toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover > .toolbarbutton-text, toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover > .toolbarbutton-badge-stack {
-    background-color: green;
-    color: inherit;
+#PersonalToolbar
+  .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover,
+#tabbrowser-arrowscrollbox:not([scrolledtostart="true"])::part(
+    scrollbutton-up
+  ):hover,
+#tabbrowser-arrowscrollbox:not([scrolledtoend="true"])::part(
+    scrollbutton-down
+  ):hover,
+toolbarbutton.bookmark-item:not(
+    .subviewbutton,
+    [disabled="true"],
+    [open]
+  ):hover,
+toolbar
+  .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover
+  > .toolbarbutton-icon,
+toolbar
+  .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover
+  > .toolbarbutton-text,
+toolbar
+  .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover
+  > .toolbarbutton-badge-stack {
+  background-color: green;
+  color: inherit;
 }
 
-#PersonalToolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover, #tabbrowser-arrowscrollbox:not([scrolledtostart="true"])::part(scrollbutton-up):hover, #tabbrowser-arrowscrollbox:not([scrolledtoend="true"])::part(scrollbutton-down):hover, toolbarbutton.bookmark-item:not(.subviewbutton, [disabled="true"], [open]):hover, toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover > .toolbarbutton-icon, toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover > .toolbarbutton-text, toolbar .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover > .toolbarbutton-badge-stack {
-    background-color: #1a1a1a !important;
-    color: #b24747 !important;
+#PersonalToolbar
+  .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover,
+#tabbrowser-arrowscrollbox:not([scrolledtostart="true"])::part(
+    scrollbutton-up
+  ):hover,
+#tabbrowser-arrowscrollbox:not([scrolledtoend="true"])::part(
+    scrollbutton-down
+  ):hover,
+toolbarbutton.bookmark-item:not(
+    .subviewbutton,
+    [disabled="true"],
+    [open]
+  ):hover,
+toolbar
+  .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover
+  > .toolbarbutton-icon,
+toolbar
+  .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover
+  > .toolbarbutton-text,
+toolbar
+  .toolbarbutton-1:not([disabled="true"], [checked], [open], :active):hover
+  > .toolbarbutton-badge-stack {
+  background-color: #1a1a1a !important;
+  color: #b24747 !important;
 }
 
-#PersonalToolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:active), #tabbrowser-arrowscrollbox:not([scrolledtostart="true"])::part(scrollbutton-up):hover:active, #tabbrowser-arrowscrollbox:not([scrolledtoend="true"])::part(scrollbutton-down):hover:active, toolbarbutton.bookmark-item:hover:active:not(.subviewbutton, [disabled="true"]), toolbarbutton.bookmark-item[open="true"], toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:active) > .toolbarbutton-icon, toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:active) > .toolbarbutton-text, toolbar .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:active) > .toolbarbutton-badge-stack {
-    background-color: #1a1a1a !important;
-    color: #b24747 !important;
+#PersonalToolbar
+  .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:active),
+#tabbrowser-arrowscrollbox:not([scrolledtostart="true"])::part(
+    scrollbutton-up
+  ):hover:active,
+#tabbrowser-arrowscrollbox:not([scrolledtoend="true"])::part(
+    scrollbutton-down
+  ):hover:active,
+toolbarbutton.bookmark-item:hover:active:not(.subviewbutton, [disabled="true"]),
+toolbarbutton.bookmark-item[open="true"],
+toolbar
+  .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:active)
+  > .toolbarbutton-icon,
+toolbar
+  .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:active)
+  > .toolbarbutton-text,
+toolbar
+  .toolbarbutton-1:not([disabled="true"]):is([open], [checked], :hover:active)
+  > .toolbarbutton-badge-stack {
+  background-color: #1a1a1a !important;
+  color: #b24747 !important;
 }
 
 /* Changes the color of the bookmark stars */
-.urlbarView-row[type=bookmark] > .urlbarView-row-inner > .urlbarView-no-wrap > .urlbarView-type-icon {
-        fill: #b24747 !important;
+.urlbarView-row[type="bookmark"]
+  > .urlbarView-row-inner
+  > .urlbarView-no-wrap
+  > .urlbarView-type-icon {
+  fill: #b24747 !important;
 }
-
-
 
 /* This makes it so that on start-up the screen doesn't flash */
 #browser vbox#appcontent tabbrowser,
 #content,
 #tabbrowser-tabpanels,
-browser[type=content-primary],
-browser[type=content] > html{
-	background: #1a1a1a !important;
+browser[type="content-primary"],
+browser[type="content"] > html {
+  background: #1a1a1a !important;
 }
-
-
 
 /* Removes weird line between the stacks and profile */
 #PanelUI-button {
-	border:none !important;
-	margin-inline-start: 0px !important;
-	padding-inline-start: 0px !important;
+  border: none !important;
+  margin-inline-start: 0px !important;
+  padding-inline-start: 0px !important;
 }
-
-
 
 /* This mess makes it so that there's no hover over the toolbar icons */
 .urlbar-icon,
@@ -412,30 +461,34 @@ toolbar toolbarbutton > .toolbarbutton-badge-stack,
 .titlebar-button,
 #identity-box,
 #tracking-protection-icon-container,
-.findbar-textbox~toolbarbutton,
+.findbar-textbox ~ toolbarbutton,
 toolbarbutton.scrollbutton-up,
 toolbarbutton.scrollbutton-down {
-	background-color: transparent !important;
+  background-color: transparent !important;
 }
-
-
 
 /* Removes the border below the bookmarks toolbar */
 #navigator-toolbox {
-	border: none !important;
+  border: none !important;
 }
 
-
-
 /* Changes the colors in the URL bar */
-#urlbar-background {background-color: #1a1a1a !important; border-color:#b24747 !important;}
-#urlbar-input-container {color: #b24747 !important;}
-#urlbar { 
+#urlbar-background {
+  background-color: #1a1a1a !important;
+  border-color: #b24747 !important;
+}
+
+#urlbar-input-container {
+  color: #b24747 !important;
+}
+
+#urlbar {
   background-color: #1a1a1a !important;
 }
 
 /* Fixes the reload animation color */
-.toolbarbutton-animatable-box, .toolbarbutton-1 {
+.toolbarbutton-animatable-box,
+.toolbarbutton-1 {
   fill: #b24747 !important;
 }
 
@@ -445,18 +498,27 @@ toolbarbutton.scrollbutton-down {
 }
 
 /* Removes the line between tabs */
-.tabbrowser-tab::before, 
-.tabbrowser-tab::after{
-	display: none !important;
+.tabbrowser-tab::before,
+.tabbrowser-tab::after {
+  display: none !important;
 }
 
 /* These two remove the weird vertical color bars between tabs*/
-:root:not([lwtheme-mozlightdark]) #TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background:-moz-lwtheme {
-    display: none;
+:root:not([lwtheme-mozlightdark])
+  #TabsToolbar:not([brighttext])
+  #tabbrowser-tabs:not([noshadowfortests])
+  .tabbrowser-tab:is([visuallyselected="true"], [multiselected])
+  > .tab-stack
+  > .tab-background:-moz-lwtheme {
+  display: none;
 }
 
-#TabsToolbar:not([brighttext]) #tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([visuallyselected="true"], [multiselected]) > .tab-stack > .tab-background {
-    display: none;
+#TabsToolbar:not([brighttext])
+  #tabbrowser-tabs:not([noshadowfortests])
+  .tabbrowser-tab:is([visuallyselected="true"], [multiselected])
+  > .tab-stack
+  > .tab-background {
+  display: none;
 }
 
 /* Removes the weird spaces between tabs*/
@@ -466,54 +528,67 @@ toolbarbutton.scrollbutton-down {
 
 /* Changes the tab topline color */
 .tabbrowser-tab {
-	--tab-line-color: #b24747 !important; 
-	color: #b24747 !important;
+  --tab-line-color: #b24747 !important;
+  color: #b24747 !important;
 }
-
-
-
 
 /* Changes the colors of the area behind the tabs */
 #tabbrowser-tabs {
-	background-color: #000000 !important;
+  background-color: #000000 !important;
 }
-
-
 
 /* Changes toolbar button colors */
 .toolbarbutton-1 {
-	fill: #b24747 !important;
-	background-color: #1a1a1a !important;
+  fill: #b24747 !important;
+  background-color: #1a1a1a !important;
 }
-
-
 
 /* This block changes the animation and colors of the download button */
-#downloads-button[attention="success"]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-icon,
-#downloads-button[attention="success"]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-progress-outer {
-	fill: #b24747 !important;
+#downloads-button[attention="success"]
+  > .toolbarbutton-badge-stack
+  > #downloads-indicator-anchor
+  > #downloads-indicator-icon,
+#downloads-button[attention="success"]
+  > .toolbarbutton-badge-stack
+  > #downloads-indicator-anchor
+  > #downloads-indicator-progress-outer {
+  fill: #b24747 !important;
 }
 
-#downloads-button[notification="start"]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-icon,
-#downloads-notification-anchor[notification="start"]>#downloads-indicator-notification {
-	fill: #b24747 !important;
+#downloads-button[notification="start"]
+  > .toolbarbutton-badge-stack
+  > #downloads-indicator-anchor
+  > #downloads-indicator-icon,
+#downloads-notification-anchor[notification="start"]
+  > #downloads-indicator-notification {
+  fill: #b24747 !important;
 }
 
-#downloads-button[progress]>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-icon,
-#downloads-button[progress]>#downloads-indicator-anchor>#downloads-indicator-progress-outer {
-	fill: #b24747 !important;
+#downloads-button[progress]
+  > .toolbarbutton-badge-stack
+  > #downloads-indicator-anchor
+  > #downloads-indicator-icon,
+#downloads-button[progress]
+  > #downloads-indicator-anchor
+  > #downloads-indicator-progress-outer {
+  fill: #b24747 !important;
 }
 
-#downloads-button>.toolbarbutton-badge-stack>#downloads-indicator-anchor>#downloads-indicator-progress-outer>#downloads-indicator-progress-inner {
-	fill: red !important;
-	border: 1px !important;
-	border-color: #b24747 !important;
+#downloads-button
+  > .toolbarbutton-badge-stack
+  > #downloads-indicator-anchor
+  > #downloads-indicator-progress-outer
+  > #downloads-indicator-progress-inner {
+  fill: red !important;
+  border: 1px !important;
+  border-color: #b24747 !important;
 }
+
 /* ENDBLOCK */
 
 /*This block changes colors inside of the downloads menu*/
 
-/* This removes the line above "Show All Downloads" */ 
+/* This removes the line above "Show All Downloads" */
 .panel-footer > xul|button {
   border-top: 1px solid none !important;
   /* !important overrides :hover and :active colors from button.css: */
@@ -533,40 +608,44 @@ toolbarbutton.scrollbutton-down {
   --arrowpanel-dimmed: none !important;
   --arrowpanel-field-background: #1a1a1a !important;
   --panel-separator-color: #b24747 !important;
-  --toolbarbutton-icon-fill-attention: var(--lwt-toolbarbutton-icon-fill-attention, #b24747) !important; 
+  --toolbarbutton-icon-fill-attention: var(
+    --lwt-toolbarbutton-icon-fill-attention,
+    #b24747
+  ) !important;
 }
+
 /* ENDBLOCK */
 
-
-
 /* This block makes the tabs seamless with the rest of the config's color */
-tab
-{
-	height:3rem;
-	background-color: #000000 !important;
-	font-weight: thin !important;
-	color: #b24747 !important;
+tab {
+  height: 3rem;
+  background-color: #000000 !important;
+  font-weight: thin !important;
+  color: #b24747 !important;
 }
 
 #nav-bar-customization-target {
-	background-color: #b24747 !important;
+  background-color: #b24747 !important;
 }
+
 /* ENDBLOCK */
-
-
 
 /* This block changes the tracking protection menu */
 
 /* Changes the little arrow going to the URL bar */
 /* This is not working right now for some reason */
-#protections-popup[mainviewshowing][side=top]::part(arrow) {
+#protections-popup[mainviewshowing][side="top"]::part(arrow) {
   fill: #1a1a1a !important;
 }
 
 /* Changes the background colors and some text colors */
 #protections-popup-mainView-panel-header-section {
   color: #b24747 !important;
-  background: radial-gradient(circle farthest-side at top right, #333333, #1a1a1a) !important;
+  background: radial-gradient(
+    circle farthest-side at top right,
+    #333333,
+    #1a1a1a
+  ) !important;
 }
 
 /* Changes the color of most of the text*/
@@ -618,7 +697,9 @@ tab
   ) !important;
 }
 
-:root[lwt-popup-brighttext] #protections-popup[hasException] #protections-popup-tp-switch-section {
+:root[lwt-popup-brighttext]
+  #protections-popup[hasException]
+  #protections-popup-tp-switch-section {
   background: repeating-linear-gradient(
     -56deg,
     #333333,
@@ -627,9 +708,10 @@ tab
     transparent 20px
   ) !important;
 }
+
 /* Changes the "No known trackers..." text color */
 #protections-popup-no-trackers-found-description {
-  color: #b24747!important;
+  color: #b24747 !important;
 }
 
 /* These two change the "Custom" and "# Blocked" text */
@@ -638,37 +720,34 @@ tab
 }
 
 #protections-popup-footer-protection-type-label {
-    color: #b24747 !important;
+  color: #b24747 !important;
 }
 
 /* ENDBLOCK */
 
-
 /* Changes the color of the empty area around the nav bar */
 #nav-bar-customization-target {
-	background-color: #1a1a1a !important;
+  background-color: #1a1a1a !important;
 }
 
-
-
 /* This block changes the colors in the hamburger and other menus */
-.PanelUI-subView, .panel-subview-body {
-	--newtab-search-icon-color: #b24747;
-	--arrowpanel-background: none !important;
-	--arrowpanel-color: #b24747 !important;
-	--lwt-accent-color: #b24747 !important;
-	--lwt-text-color: #b24747 !important;
-	color: #B24747 !important;
-	background-color: #1a1a1a !important;
-	border: 1px solid #b24747 !important;
+.PanelUI-subView,
+.panel-subview-body {
+  --newtab-search-icon-color: #b24747;
+  --arrowpanel-background: none !important;
+  --arrowpanel-color: #b24747 !important;
+  --lwt-accent-color: #b24747 !important;
+  --lwt-text-color: #b24747 !important;
+  color: #b24747 !important;
+  background-color: #1a1a1a !important;
+  border: 1px solid #b24747 !important;
 }
 
 .PanelUI-remotetabs-clientcontainer > label[itemtype="client"] {
   color: #b24747 !important;
 }
+
 /* ENDBLOCK */
-
-
 
 /* Account Settings Color */
 #fxa-menu-header-description {
@@ -700,8 +779,8 @@ tab
 .subviewbutton[disabled="true"] {
   color: #b24747 !important;
 }
-/* ENDBLOCK */
 
+/* ENDBLOCK */
 
 /* Changes the zoom reset color */
 #appMenu-zoomReset-button {
@@ -712,15 +791,13 @@ tab
   background-color: #d28888 !important;
 }
 
-	
-
 /* Changes the text color in the bookmarks bar */
 #personal-bookmarks .bookmark-item > .toolbarbutton-text {
-	text-color: #b24747 !important;
-	color: #b24747 !important;
-	background-color: none !important
+  text-color: #b24747 !important;
+  color: #b24747 !important;
+  background-color: none !important;
 }
-  
+
 /* This block changes the colors of the "Edit This Bookmark" popup */
 .panel-footer > xul|button:not([disabled])[default] {
   color: #1a1a1a !important;
@@ -746,478 +823,525 @@ tab
 
 /* Hides the private browsing indicator */
 .private-browsing-indicator {
-	display: none !important;
+  display: none !important;
 }
-
-
-
-
 
 /* The block below changes icons for various different sites to match Halo's theme */
 
 /* YouTube */
-.bookmark-item[image^="page-icon:https://www.youtube.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/youtube_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.youtube.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/youtube_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Twitter */
-.bookmark-item[image^="page-icon:https://twitter.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/twitter_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://twitter.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/twitter_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Reddit */
-.bookmark-item[image^="page-icon:https://www.reddit.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/reddit_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.reddit.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/reddit_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Pinterest */
-.bookmark-item[image^="page-icon:https://www.pinterest.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/pinterest_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.pinterest.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/pinterest_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Pinterest */
-.bookmark-item[image^="page-icon:https://www.pinterest.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/pinterest_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.pinterest.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/pinterest_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Facebook */
-.bookmark-item[image^="page-icon:https://www.facebook.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/facebook_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.facebook.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/facebook_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Tumblr */
-.bookmark-item[image^="page-icon:https://www.tumblr.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/tumblr_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.tumblr.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/tumblr_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Instagram */
-.bookmark-item[image^="page-icon:https://www.instagram.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/instagram_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.instagram.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/instagram_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* LinkedIn */
-.bookmark-item[image^="page-icon:https://www.linkedin.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/linkedin_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.linkedin.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/linkedin_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* NextDoor */
-.bookmark-item[image^="page-icon:https://www.nextdoor.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/nextdoor_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.nextdoor.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/nextdoor_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* DeviantArt */
-.bookmark-item[image^="page-icon:https://www.deviantart.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/deviantart_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.deviantart.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/deviantart_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Discord */
-.bookmark-item[image^="page-icon:https://discord.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/discord_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://discord.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/discord_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* TikTok */
-.bookmark-item[image^="page-icon:https://www.tiktok.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/tiktok_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.tiktok.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/tiktok_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Wikipedia */
-.bookmark-item[image^="page-icon:https://en.wikipedia.org"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/wikipedia_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://en.wikipedia.org"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/wikipedia_icon.png") !important;
+  background-size: cover !important;
 }
 
-
 /* Amazon */
-.bookmark-item[image^="page-icon:https://www.amazon.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/amazon_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.amazon.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/amazon_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Disney Plus */
-.bookmark-item[image^="page-icon:https://www.disneyplus.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/disneyplus_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.disneyplus.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/disneyplus_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Yelp */
-.bookmark-item[image^="page-icon:https://www.yelp.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/yelp_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.yelp.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/yelp_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Netflix */
-.bookmark-item[image^="page-icon:http://www.netflix.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/netflix_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:http://www.netflix.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/netflix_icon.png") !important;
+  background-size: cover !important;
 }
-.bookmark-item[image^="page-icon:https://www.netflix.com/browse"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/netflix_icon.png")!important;
-  background-size: cover!important;
+
+.bookmark-item[image^="page-icon:https://www.netflix.com/browse"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/netflix_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Drive */
-.bookmark-item[image^="page-icon:https://drive.google.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/drive_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://drive.google.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/drive_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* IMDb */
-.bookmark-item[image^="page-icon:https://www.imdb.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/imdb_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.imdb.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/imdb_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Fandom */
-.bookmark-item[image^="page-icon:https://www.fandom.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/fandom_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.fandom.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/fandom_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Tripadvisor */
-.bookmark-item[image^="page-icon:https://www.tripadvisor.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/tripadvisor_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.tripadvisor.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/tripadvisor_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Craigslist */
-.bookmark-item[image^="page-icon:https://craigslist.org/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/craigslist_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://craigslist.org/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/craigslist_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Ebay */
-.bookmark-item[image^="page-icon:https://www.ebay.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/ebay_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.ebay.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/ebay_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Indeed */
-.bookmark-item[image^="page-icon:https://www.indeed.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/indeed_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.indeed.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/indeed_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Etsy */
-.bookmark-item[image^="page-icon:https://www.etsy.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/etsy_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.etsy.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/etsy_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Apple */
-.bookmark-item[image^="page-icon:https://www.apple.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/apple_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.apple.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/apple_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* ESPN */
-.bookmark-item[image^="page-icon:https://www.espn.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/espn_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.espn.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/espn_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* New York Times */
-.bookmark-item[image^="page-icon:https://www.nytimes.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/nyt_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.nytimes.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/nyt_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Google */
-.bookmark-item[image^="page-icon:https://www.google.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/google_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.google.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/google_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* CNN */
-.bookmark-item[image^="page-icon:https://www.cnn.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/cnn_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.cnn.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/cnn_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Microsoft */
-.bookmark-item[image^="page-icon:https://www.microsoft.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/microsoft_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.microsoft.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/microsoft_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Dropbox */
-.bookmark-item[image^="page-icon:https://www.dropbox.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/dropbox_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.dropbox.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/dropbox_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Spotify */
-.bookmark-item[image^="page-icon:https://www.spotify.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/spotify_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.spotify.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/spotify_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Steam */
-.bookmark-item[image^="page-icon:https://store.steampowered.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/steam_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://store.steampowered.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/steam_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* PayPal */
-.bookmark-item[image^="page-icon:https://www.paypal.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/paypal_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.paypal.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/paypal_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Hulu */
-.bookmark-item[image^="page-icon:https://www.hulu.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/hulu_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.hulu.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/hulu_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* NPR */
-.bookmark-item[image^="page-icon:https://www.npr.org/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/npr_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.npr.org/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/npr_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* BBC */
-.bookmark-item[image^="page-icon:https://www.bbc.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/bbc_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.bbc.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/bbc_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* GitHub */
-.bookmark-item[image^="page-icon:https://github.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/github_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://github.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/github_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Gmail */
-.bookmark-item[image^="page-icon:https://mail.google.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/gmail_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://mail.google.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/gmail_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Generic Icon YOU HAVE TO ASSIGN THE SITE */
 .bookmark-item[image^="LINK"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/noicon_icon.png")!important;
-  background-size: cover!important;
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/noicon_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* OnPoint */
-.bookmark-item[image^="page-icon:https://www.onpointcu.com"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/onpoint_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://www.onpointcu.com"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/onpoint_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Faithful */
-.bookmark-item[image^="page-icon:https://faithful.team"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/faithful_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://faithful.team"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/faithful_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Faithful Tweaks */
-.bookmark-item[image^="page-icon:https://faithfultweaks.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/faithful_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://faithfultweaks.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/faithful_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Faithful Site Editor */
-.bookmark-item[image^="page-icon:https://alexeykrainev.ghost.io"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/faithful_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://alexeykrainev.ghost.io"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/faithful_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* World of Succulents */
-.bookmark-item[image^="page-icon:https://worldofsucculents.com/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/worldofsucculents_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://worldofsucculents.com/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/worldofsucculents_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* MCECS */
-.bookmark-item[image^="page-icon:https://intranet.cecs.pdx.edu/home/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/MCECS_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://intranet.cecs.pdx.edu/home/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/MCECS_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* D2L */
-.bookmark-item[image^="page-icon:https://d2l.pdx.edu/d2l/home"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/D2L_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://d2l.pdx.edu/d2l/home"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/D2L_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Comlpliance */
-.bookmark-item[image^="page-icon:https://compliancepack.net/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/compliance_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://compliancepack.net/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/compliance_icon.png") !important;
+  background-size: cover !important;
 }
 
 /* Canvas */
-.bookmark-item[image^="page-icon:https://canvas.pdx.edu/"] > .toolbarbutton-icon {
-  width: 0px!important;
-  height: 0px!important;
-  padding: 0 0 16px 16px!important;
-  background-image: url("icon/canvas_icon.png")!important;
-  background-size: cover!important;
+.bookmark-item[image^="page-icon:https://canvas.pdx.edu/"]>.toolbarbutton-icon
+{
+  width: 0px !important;
+  height: 0px !important;
+  padding: 0 0 16px 16px !important;
+  background-image: url("icon/canvas_icon.png") !important;
+  background-size: cover !important;
 }

@@ -1,45 +1,41 @@
 @-moz-document url-prefix("about:config") {
+  :root {
+    --in-content-text-color: #b24747 !important; /* Changes most text color*/
+    --in-content-page-background: #1a1a1a !important; /* Page background color*/
+    --in-content-page-color: #b24747 !important; /* Some text color */
+    --in-content-box-background: #1a1a1a !important; /* Search bar background color */
+    --in-content-box-border-color: #b24747 !important; /* Search bar border color */
+    --in-content-border-hover: #b24747 !important; /* Search bar border color on hover*/
+    --glow-color: #993d3d !important;
+    --in-content-button-background: #333333 !important; /* Changes the buttons on the right side main color */
+    --in-content-button-background-hover: #333333 !important; /* Changes the buttons on the right side main color on hover */
+    --in-content-button-background-active: #333333 !important; /* Changes the buttons on the right side main color on active */
+    --blue-60: #b24747 !important; /* Changes the check mark button color regular */
+    --blue-70: #b24747 !important; /* Changes the check mark button color hover */
+    --blue-80: #b24747 !important; /* Changes the check mark button color active */
+    --in-content-item-hover: #333333 !important; /* Changes the color when you hover over an item */
+  }
 
-:root {
-  --in-content-text-color: #b24747 !important; /* Changes most text color*/
-  --in-content-page-background: #1a1a1a !important; /* Page background color*/
-  --in-content-page-color: #b24747 !important; /* Some text color */
-  --in-content-box-background: #1a1a1a !important; /* Search bar background color */
-  --in-content-box-border-color: #b24747 !important; /* Search bar border color */
-  --in-content-border-hover: #b24747 !important; /* Search bar border color on hover*/
-  --glow-color: #993d3d !important;
-  --in-content-button-background: #333333 !important; /* Changes the buttons on the right side main color */ 
-  --in-content-button-background-hover: #333333 !important; /* Changes the buttons on the right side main color on hover */ 
-  --in-content-button-background-active: #333333 !important; /* Changes the buttons on the right side main color on active */ 
-  --blue-60: #b24747 !important; /* Changes the check mark button color regular */
-  --blue-70: #b24747 !important; /* Changes the check mark button color hover */
-  --blue-80: #b24747 !important; /* Changes the check mark button color active */
-  --in-content-item-hover: #333333 !important; /* Changes the color when you hover over an item */
+  /* Changes the color of the slipping sign */
+  .config-background {
+    background: url("svg/card-about-config.svg") no-repeat !important;
+  }
 
+  /* These three change the check mark button color*/
+  xul|checkbox[checked] > xul|*.checkbox-check,
+  html|input[type="checkbox"]:checked {
+    color: var(--in-content-box-border-color) !important;
+    background-color: var(--in-content-box-background) !important;
+  }
 
-}
+  xul|checkbox:not([disabled="true"])[checked]:hover > xul|*.checkbox-check,
+  html|input[type="checkbox"]:enabled:checked:hover {
+    background-color: var(--in-content-box-background) !important;
+  }
 
-
-/* Changes the color of the slipping sign */
-.config-background {
-  background: url("svg/card-about-config.svg") no-repeat !important;
-}
-
-/* These three change the check mark button color*/
-xul|checkbox[checked] > xul|*.checkbox-check,
-html|input[type="checkbox"]:checked {
-  color: var(--in-content-box-border-color) !important;
-  background-color: var(--in-content-box-background) !important;
-}
-
-xul|checkbox:not([disabled="true"])[checked]:hover > xul|*.checkbox-check,
-html|input[type="checkbox"]:enabled:checked:hover {
-  background-color: var(--in-content-box-background) !important;
-}
-
-xul|checkbox:not([disabled="true"])[checked]:hover:active > xul|*.checkbox-check,
-html|input[type="checkbox"]:enabled:checked:hover:active {
-  background-color: var(--in-content-box-background) !important;
-}
-
+  xul|checkbox:not([disabled="true"])[checked]:hover:active
+    > xul|*.checkbox-check,
+  html|input[type="checkbox"]:enabled:checked:hover:active {
+    background-color: var(--in-content-box-background) !important;
+  }
 }
