@@ -1,19 +1,17 @@
-@-moz-document  url-prefix("about:addons") {
+@-moz-document url-prefix("about:addons") {
+  :root {
+    --in-content-text-color: #b24747 !important; /* Changes some of the text color */
+    --in-content-page-background: #1a1a1a !important; /* Changes the background color */
+    --in-content-page-color: #b24747 !important; /* Changes the main text color */
+    --in-content-box-background-active: #1a1a1a !important; /* Background color in General application thing on selection */
+    --in-content-box-background-hover: #1a1a1a !important; /* Background color in General application thing */
+    --in-content-box-background: #1a1a1a !important; /*This HAS to be kept. */
+    --in-content-box-border-color: #b24747 !important; /*This HAS to be kept. It changes a lot of the borders */
+    --in-content-box-info-background: #1a1a1a !important; /* Changes the "You are currently syncing these items" box background color */
+  }
 
-:root {
-  --in-content-text-color:#b24747 !important; /* Changes some of the text color */
-  --in-content-page-background: #1a1a1a !important; /* Changes the background color */
-  --in-content-page-color: #b24747 !important; /* Changes the main text color */
-  --in-content-box-background-active: #1a1a1a !important; /* Background color in General application thing on selection */
-  --in-content-box-background-hover: #1a1a1a !important; /* Background color in General application thing */
-  --in-content-box-background: #1a1a1a !important; /*This HAS to be kept. */
-  --in-content-box-border-color: #b24747 !important; /*This HAS to be kept. It changes a lot of the borders */
-  --in-content-box-info-background: #1a1a1a !important; /* Changes the "You are currently syncing these items" box background color */
-}
-
-/* Changes the header color*/
-html|h1 {
-  color: #b24747 !important;
-}
-
+  /* Changes the header color*/
+  html|h1 {
+    color: #b24747 !important;
+  }
 }

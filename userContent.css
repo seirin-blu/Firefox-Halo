@@ -1,7 +1,5 @@
 /*::::Firefox Halo::::*/
 
-
-
 /* Imports the css for other Firefox pages */
 @import "about-about.css";
 @import "about-addons.css";
@@ -16,7 +14,6 @@
 /* Importants the css for non-Firefox pages */
 @import "google.css";
 
-
 /* This theoretically should make it so that you can just change the colors from here */
 body {
   --main-color: #1a1a1a;
@@ -26,8 +23,6 @@ body {
   --newtab-textbox-background-color: var(--main-accent-color);
 }
 
-
-
 /*
 
 Private Browsing 
@@ -35,89 +30,69 @@ Private Browsing
 
 */
 @-moz-document url(about:privatebrowsing) {
-
-/* Removes the VPN ad */
-#private-browsing-vpn-text {
+  /* Removes the VPN ad */
+  #private-browsing-vpn-text {
     display: none !important;
-}
+  }
 
-#private-browsing-vpn-link {
+  #private-browsing-vpn-link {
     display: none !important;
-}
+  }
 
-
-
-/* Gets rid of search bar in private browsing mode */
-html.private div.showPrivate div.search-inner-wrapper, html.private div.showPrivate div.info {
+  /* Gets rid of search bar in private browsing mode */
+  html.private div.showPrivate div.search-inner-wrapper,
+  html.private div.showPrivate div.info {
     display: none !important;
-}
+  }
 
-
-
-/* Hides the "You're in private browsing mode" dialog */
-.info {
+  /* Hides the "You're in private browsing mode" dialog */
+  .info {
     display: none !important;
+  }
+
+  /* Changes the logo on the private browsing home screen */
+  html.private .logo {
+    background-image: url("firefox_halo_with_paw_private.png") !important;
+  }
+
+  /* Changes the color of the wordmark */
+  .wordmark {
+    fill: var(--main-accent-color) !important;
+  }
+
+  /* Centers logo and wordmark */
+  .logo-and-wordmark {
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin-bottom: 49px !important;
+  }
+
+  /* Changes the home screen color */
+  html.private {
+    --in-content-page-background: #261010 !important;
+  }
 }
-
-
-
-/* Changes the logo on the private browsing home screen */
-html.private .logo {
-	background-image: url("firefox_halo_with_paw_private.png") !important;
-}
-
-
-
-/* Changes the color of the wordmark */
-.wordmark {
-  fill: var(--main-accent-color) !important;
-}
-
-
-
-/* Centers logo and wordmark */
-.logo-and-wordmark {
-  align-items: center !important;
-  display: flex !important;
-  justify-content: center !important;
-  margin-bottom: 49px !important;
-}
-
-
-
-/* Changes the home screen color */
-html.private {
-    --in-content-page-background: #261010 !important;}
-
-
-
-}
-
-
 
 /*
 
 Common Browsing
 
 */
-@-moz-document url(about:newtab), url(about:home), url(about:blank) { 
+@-moz-document url(about:newtab), url(about:home), url(about:blank) {
+  /* Gets rid of the dumb "Personalize" button on the home page */
+  .personalize-button {
+    display: none;
+  }
 
-/* Gets rid of the dumb "Personalize" button on the home page */
-.personalize-button {
- display: none;
- }
-
-
-    
-/* Changes the gear on the home page to be red*/
-.icon {
+  /* Changes the gear on the home page to be red*/
+  .icon {
     color: var(--main-accent-color) !important;
-}    
-    
-    
-    
-/* Makes the search bar on the home screen round with red text and a red border when not clicked */
-.search-wrapper .search-handoff-button, .search-wrapper input {
+  }
+
+  /* Makes the search bar on the home screen round with red text and a red border when not clicked */
+  .search-wrapper .search-handoff-button,
+  .search-wrapper input {
     background: #1a1a1a !important;
     background-size: 24px;
     padding-inline-start: 52px;
@@ -127,134 +102,114 @@ Common Browsing
     box-shadow: none !important;
     border: 1px solid #b24747 !important;
     border-radius: 30px !important;
-}
-    
-.search-wrapper .search-handoff-button {
-    color: #b24747 !important;
-}
-    
-/* Aligns the fake-textbox to the center */
-.search-handoff-button .fake-textbox {
-    opacity: 1 !important;
-    text-align: center !important;
-}
-
-
-/* Changes the color of the glow when you click the search bar on the home screen */
-.search-wrapper .search-inner-wrapper:active input, .search-wrapper input:focus {
-  border: 3px solid var(--main-accent-color) !important;
-  box-shadow: 0 0 7px var(--glow-color) !important;
   }
 
+  .search-wrapper .search-handoff-button {
+    color: #b24747 !important;
+  }
 
+  /* Aligns the fake-textbox to the center */
+  .search-handoff-button .fake-textbox {
+    opacity: 1 !important;
+    text-align: center !important;
+  }
 
-/* Changes the background color inside of the search bar */
-#newtab-search-text{
-  background-color: var(--main-color) !important;
-  color: var(--main-accent-color) !important;
+  /* Changes the color of the glow when you click the search bar on the home screen */
+  .search-wrapper .search-inner-wrapper:active input,
+  .search-wrapper input:focus {
+    border: 3px solid var(--main-accent-color) !important;
+    box-shadow: 0 0 7px var(--glow-color) !important;
+  }
+
+  /* Changes the background color inside of the search bar */
+  #newtab-search-text {
+    background-color: var(--main-color) !important;
+    color: var(--main-accent-color) !important;
+  }
+
+  /* Changes the gear color and removes the hover */
+  .prefs-button button {
+    fill: var(--main-accent-color) !important;
+  }
+
+  .prefs-button button:hover,
+  .prefs-button button:focus {
+    background-color: transparent !important;
+  }
+
+  /* Turns of search suggestions on the home screen */
+  .contentSearchSuggestionTable {
+    display: none !important;
+  }
+
+  /* Changes the home screen color */
+  body {
+    background-color: var(--main-color) !important;
+  }
+
+  /* Centers logo and wordmark */
+  .search-wrapper .logo-and-wordmark {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 49px;
+  }
+
+  /* Makes it so that no border appears around the search arrow */
+  .search-wrapper .search-button:focus,
+  .search-wrapper .search-button:hover {
+    background-color: transparent !important;
+    cursor: pointer !important;
+  }
+  .search-wrapper .search-button:active {
+    background-color: transparent !important;
+  }
+
+  /* Changes the logo on the home screen*/
+  .logo {
+    background-image: url("firefox_halo_with_paw_red.png") !important;
+  }
+
+  /* Changes the color of the wordmark */
+  .wordmark {
+    fill: var(--main-accent-color) !important;
+  }
 }
-
-
-
-/* Changes the gear color and removes the hover */
-.prefs-button button {fill: var(--main-accent-color) !important;}
-
-.prefs-button button:hover, .prefs-button button:focus {
-    background-color:  transparent !important; }	
- 
-
-
-/* Turns of search suggestions on the home screen */
-.contentSearchSuggestionTable {display: none !important;}
-
-
-
-/* Changes the home screen color */
-body{ background-color: var(--main-color) !important }
-
-
-
-/* Centers logo and wordmark */
-.search-wrapper .logo-and-wordmark {
-align-items: center;
-display: flex;
-justify-content: center;
-margin-bottom: 49px; }
-
-
-
-
-/* Makes it so that no border appears around the search arrow */
-.search-wrapper .search-button:focus, .search-wrapper .search-button:hover {
-      background-color: transparent !important;
-      cursor: pointer !important; }
-.search-wrapper .search-button:active {
-      background-color: transparent !important; }
-
-
-/* Changes the logo on the home screen*/
-.logo {background-image: url("firefox_halo_with_paw_red.png") !important;}
-
-
-
-/* Changes the color of the wordmark */
-.wordmark { fill: var(--main-accent-color) !important;}
-}
-
-
 
 /* Makes the search bar on the home screen round with red text and a red border when not clicked */
 #newtab-search-text,
-  #searchSubmit{
-    fill: var(--main-accent-color) !important;
-    border-radius: 48px !important;
-    border-color: var(--main-accent-color) !important;
-    box-shadow: none !important;
-    background-color: none !important;
-    color: none !important;
-    font-family: helvetica !important
-  }
-
-
+#searchSubmit {
+  fill: var(--main-accent-color) !important;
+  border-radius: 48px !important;
+  border-color: var(--main-accent-color) !important;
+  box-shadow: none !important;
+  background-color: none !important;
+  color: none !important;
+  font-family: helvetica !important;
+}
 
 /* Changes the color of the glow when you click the search bar on the home screen */
-.search-wrapper .search-inner-wrapper:active input, .search-wrapper input:focus {
+.search-wrapper .search-inner-wrapper:active input,
+.search-wrapper input:focus {
   border: 3px solid var(--main-accent-color) !important;
   box-shadow: 0 0 7px var(--glow-color) !important;
-  }
-
-
+}
 
 /* Changes the background color inside of the search bar */
-#newtab-search-text{
+#newtab-search-text {
   background-color: var(--main-color) !important;
   color: var(--main-accent-color) !important;
 }
 
-
-
 /* Turns of search suggestions on the home screen */
-.contentSearchSuggestionTable {display: none !important;}
-
-
+.contentSearchSuggestionTable {
+  display: none !important;
+}
 
 /* Centers logo and wordmark */
 .search-wrapper .logo-and-wordmark {
-align-items: center;
-display: flex;
-justify-content: center;
-margin-bottom: 49px; }
-
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 49px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
